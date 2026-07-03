@@ -1,5 +1,5 @@
 "use client"
-import { cn } from "@swastik/ui/lib/utils"
+import { cn } from "@super/ui/lib/utils"
 import { motion, useMotionTemplate, useScroll, UseScrollOptions, useTransform, } from "motion/react"
 import { PropsWithChildren, useRef } from "react"
 

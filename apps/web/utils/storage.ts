@@ -1,4 +1,4 @@
-import { createBrowserSupabaseClient } from "@swastik/supabase/client";
+import { createBrowserSupabaseClient } from "@super/supabase/client";
 
 /**
  * Uploads a file to the Supabase public_assets storage bucket.

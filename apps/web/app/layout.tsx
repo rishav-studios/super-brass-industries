@@ -3,16 +3,15 @@ import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import LenisProvider from "@/components/providers/LenisProvider";
 import { PageTransitionProvider } from "@/components/providers/PageTransitionProvider";
-import TrailingCursor from "@/components/shared/TrailingCursor";
-import { TooltipProvider } from "@swastik/ui/components/shadcn/tooltip";
+import { TooltipProvider } from "@super/ui/components/shadcn/tooltip";
 import type { Metadata } from "next";
 import { ViewTransitions } from "next-view-transitions";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const googleSansFlex = localFont({
-  src: "../../../packages/ui/src/fonts/GoogleSansFlex.ttf",
-  variable: "--font-googleSansFlex",
+const ArchivoFont = localFont({
+  src: "../../../packages/ui/src/fonts/Archivo.ttf",
+  variable: "--font-archivo",
 });
 
 export const metadata: Metadata = {
@@ -27,14 +26,14 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${googleSansFlex.className}`}>
+      <body className={`${ArchivoFont.className}`}>
 
         <TooltipProvider>
           <ViewTransitions>
             <PageTransitionProvider>
               <LenisProvider>
                 <PageTransitionOverlay />
-                <TrailingCursor />
+                {/* <TrailingCursor /> */}
                 {/* <FirstLoaderAnimation /> */}
                 <Navbar facilityCategories={[
                   {

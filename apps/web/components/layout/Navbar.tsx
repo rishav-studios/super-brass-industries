@@ -1,20 +1,19 @@
 "use client";
 
 import { TransitionLink } from "@/components/shared/TransitionLink";
-import { FacilityCategory } from "@swastik/types";
-import { icons } from "@swastik/ui";
+import { FacilityCategory } from "@super/types";
+import { icons } from "@super/ui";
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-} from "@swastik/ui/components/shadcn/dropdown-menu";
+} from "@super/ui/components/shadcn/dropdown-menu";
 
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
-import { CustomLink } from "../shared/clickables/CustomLink";
-import Container from "./Container";
+import { Arrow, CustomLink } from "../shared/clickables/CustomLink";
 
 type NavLink = {
     name: string,
@@ -24,18 +23,24 @@ type NavLink = {
 
 const NAV_LINKS: NavLink[] = [
     {
+        name: "Home",
+        href: "/home",
+        type: "link"
+    },
+    {
         name: "About",
         href: "/about",
         type: "link"
     },
     {
-        name: "Sectors", href: "/sectors",
-        type: "link"
+        name: "Categories",
+        href: "/categories",
+        type: "dropdown"
     },
     {
-        name: "Facilities",
-        href: "/facilities",
-        type: "dropdown"
+        name: "Contact",
+        href: "/contact",
+        type: "link"
     },
     // {
     //     name: "Blog",
@@ -86,7 +91,7 @@ const MobileNavigation = ({
                         <div className="flex justify-between items-center p-6 pb-2 border-b border-white/10">
                             <div style={{ width: 140, height: 40 }} className="relative">
                                 <Image
-                                    src="/logo.svg"
+                                    src="/logo-main.svg"
                                     alt="Swastik Brass Components"
                                     fill
                                     className="object-contain object-left invert brightness-0"
@@ -185,132 +190,66 @@ const MobileNavigation = ({
 
 const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
     const { scrollY } = useScroll();
-    const [isFacilitiesHovered, setIsFacilitiesHovered] = useState(false);
     const [isMobileOpen, setIsMobileOpen] = useState(false);
 
     // Each value is mapped directly from scroll position — no boolean, no state
-    const y = useTransform(scrollY, [SCROLL_START, SCROLL_END], [36, 18]);
-
+    const y = useTransform(scrollY, [SCROLL_START, SCROLL_END], [64, 18]);
+    const width = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["100%", "90%"]);
+    const innerContainerWidth = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["90%", "99%"]);
+    const borderRadius = useTransform(scrollY, [SCROLL_START, SCROLL_END], [0, 16])
+    const innerContainerPaddingLeft = useTransform(scrollY, [SCROLL_START, SCROLL_END], [0, 16]);
 
     return (
         <>
-            <MobileNavigation isOpen={isMobileOpen} setIsOpen={setIsMobileOpen} facilityCategories={facilityCategories} />
+            {/* <MobileNavigation isOpen={isMobileOpen} setIsOpen={setIsMobileOpen} facilityCategories={facilityCategories} /> */}
             <motion.nav
                 style={{
                     y,
+
                 }}
-                className="flex fixed left-0 right-0 z-50 w-full pointer-events-auto"
+                className="flex fixed left-0 right-0 z-50 w-full  pointer-events-auto"
             >
-                <Container className="backdrop-blur-md bg-white/80 rounded-full shadow-lg">
-                    <div
-                        className=" flex gap-6 xl:gap-0 xl:grid xl:grid-cols-4  pr-2 pl-6 py-2 md:py-1 lg:py-0"
-                    >
-                        {/* Logo */}
-                        <TransitionLink href="/" className="flex items-center lg:col-span-1">
-                            <div
-                                style={{ width: 140, height: 40 }}
-                                className="relative ">
-                                <Image
-                                    src="/logo.svg"
-                                    alt="Swastik Brass Components"
-                                    fill
-                                    className="object-contain object-left"
-                                    priority
-                                />
-                            </div>
-                        </TransitionLink>
+                <motion.div
+                    style={{
+                        width,
+                        borderRadius
 
-                        {/* Links */}
-                        <div className="hidden lg:flex items-center gap-8 relative justify-center lg:col-span-2">
-                            {NAV_LINKS.map((link) => {
-                                if (link.type === "dropdown") {
-                                    return (
-                                        <div
-                                            key={link.name}
-                                            className="relative"
-                                            onMouseEnter={() => setIsFacilitiesHovered(true)}
-                                            onMouseLeave={() => setIsFacilitiesHovered(false)}
-                                        >
-                                            <TransitionLink
-                                                href={link.href}
-                                                className="relative text-sm font-medium text-foreground hover:text-primary transition-colors group flex items-center gap-1 py-4"
-                                            >
-                                                {link.name}
-                                                <icons.chevronDown className={`w-3 h-3 transition-transform duration-300 ${isFacilitiesHovered ? 'rotate-180' : ''}`} />
-                                                <span className="absolute bottom-3 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full rounded-full" />
-                                            </TransitionLink>
+                    }}
+                    className="mx-auto bg-white"
+                >
+                    {/* Containe component */}
+                    <motion.div
+                        style={{
+                            width: innerContainerWidth,
+                            paddingLeft: innerContainerPaddingLeft
+                        }}
+                        className=" mx-auto flex items-center h-16 gap-12">
+                        <div className="h-16 py-4">
+                            <CustomLink variant="custom" href="/">
 
-                                            {/* Dropdown */}
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                animate={isFacilitiesHovered ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 10, scale: 0.95 }}
-                                                transition={{ duration: 0.2, ease: "easeOut" }}
-                                                className={`absolute top-full left-1/2 -translate-x-1/2 w-64 bg-white/90 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-xl overflow-hidden ${isFacilitiesHovered ? 'pointer-events-auto' : 'pointer-events-none'}`}
-                                                style={{ transformOrigin: "top center" }}
-                                            >
-                                                <div className="p-2 flex flex-col">
-                                                    {facilityCategories.map(cat => (
-                                                        <TransitionLink
-                                                            key={cat.slug}
-                                                            href={`/facilities/${cat.slug}`}
-                                                            className="px-4 py-3 hover:bg-black/5 rounded-xl transition-colors flex items-center gap-3 group/item"
-                                                        >
-                                                            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
-                                                                <icons.building2 className="w-4 h-4" />
-                                                            </div>
-                                                            <div>
-                                                                <p className="text-sm font-bold text-foreground group-hover/item:text-primary transition-colors">{cat.display_name || cat.name}</p>
-                                                            </div>
-                                                        </TransitionLink>
-                                                    ))}
-                                                </div>
-                                            </motion.div>
-                                        </div>
-                                    );
-                                }
-
-                                return (
-                                    <CustomLink
-                                        key={link.name}
-                                        href={link.href}
-                                        variant="hover-underline"
-                                    >
-                                        {link.name}
-                                    </CustomLink>
-                                );
-                            })}
+                                <img className="w-full h-full" src="/logo-main.svg" alt="Logo" />
+                            </CustomLink>
                         </div>
-
-
-                        {/* Actions */}
-                        <div className="flex gap-6 items-center justify-end ml-auto lg:col-span-1">
-                            <div className="flex items-center gap-6">
-
+                        <div className="flex gap-6">
+                            {NAV_LINKS.map((link, i) => (
                                 <CustomLink
-                                    href="/contact"
-                                    variant="outline-black"
-                                    className="text-sm hidden lg:flex"
+                                    key={i}
+                                    href={link.href}
+                                    className="text-black hover:text-primary transition-colors"
                                 >
-                                    Contact
+                                    {link.name}
                                 </CustomLink>
-                                <CustomLink
-                                    href="/quote"
-                                    variant="button-brand"
-                                    className="text-sm hidden md:flex"
-                                >
-                                    Quote Request
-                                </CustomLink>
-                            </div>
-
-                            <button
-                                className="lg:hidden flex p-2 mr-2 text-foreground hover:bg-black/5 rounded-full transition-colors"
-                                onClick={() => setIsMobileOpen(true)}
-                            >
-                                <icons.menu className="w-6 h-6" />
-                            </button>
+                            ))}
                         </div>
-                    </div>
-                </Container>
+                        <div className="flex ml-auto gap-6">
+
+                            <CustomLink variant="button-brand">
+                                Request a Quote
+                                <Arrow variant="white" />
+                            </CustomLink>
+                        </div>
+                    </motion.div>
+                </motion.div>
             </motion.nav>
         </>
     );

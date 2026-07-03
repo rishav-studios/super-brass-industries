@@ -1,4 +1,4 @@
-import { cn } from "@swastik/ui/lib/utils";
+import { cn } from "@super/ui/lib/utils";
 import { CSSProperties, ReactNode } from "react";
 type StickyContainerProps = {
     children: ReactNode;

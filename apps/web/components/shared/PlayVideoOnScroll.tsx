@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@swastik/ui/lib/utils";
+import { cn } from "@super/ui/lib/utils";
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { StickyItem } from "./Sticky";

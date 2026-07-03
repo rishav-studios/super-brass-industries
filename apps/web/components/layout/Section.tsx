@@ -1,4 +1,4 @@
-import { cn } from "@swastik/ui/lib/utils";
+import { cn } from "@super/ui/lib/utils";
 import { ComponentProps, PropsWithChildren } from "react";
 
 type SectionProps = PropsWithChildren<{

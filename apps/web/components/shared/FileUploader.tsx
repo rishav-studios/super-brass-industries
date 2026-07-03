@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
 import { uploadToSupabase } from "@/utils/storage";
-import { icons } from "@swastik/ui/constants/icon";
-import { cn } from "@swastik/ui/lib/utils";
-import { toast } from "@swastik/ui/components/shadcn";
+import { toast } from "@super/ui/components/shadcn";
+import { icons } from "@super/ui/constants/icon";
+import { cn } from "@super/ui/lib/utils";
+import { useCallback, useRef, useState } from "react";
 
 interface FileUploaderProps {
     value?: string | null;
@@ -52,8 +52,8 @@ export const FileUploader = ({
         // Validate extension (basic check against accept string)
         const fileExt = `.${file.name.split(".").pop()?.toLowerCase()}`;
         if (accept && !accept.split(",").includes(fileExt)) {
-             toast.error(`Invalid file type. Accepted types: ${accept}`);
-             return;
+            toast.error(`Invalid file type. Accepted types: ${accept}`);
+            return;
         }
 
         try {

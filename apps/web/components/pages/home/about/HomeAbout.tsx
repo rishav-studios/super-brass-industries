@@ -5,78 +5,60 @@ import BackgroundNoise, { BackgroundLines } from "@/components/shared/Background
 import { Arrow, CustomLink } from "@/components/shared/clickables/CustomLink"
 import { Eyebrow } from "@/components/shared/SectionHeader"
 import { TextRevealOnScroll } from "@/components/shared/TextReveal"
-import { icons } from "@swastik/ui"
-import DesktopCircles from "./DesktopCircles"
-import MobileCircles from "./MobileCircles"
-
+import { icons } from "@super/ui"
 
 const HomeAbout = () => {
     return (
-        <Section className="relative bg-background h-[440dvh] lg:h-[300dvh] xl:h-[220dvh] py-0">
+        <Section className="relative bg-background  py-0 overflow-visible">
             <BackgroundNoise />
             <BackgroundLines className="w-[90%] mx-auto" />
-            <Container className="absolute inset-0 z-10">
 
+            {/* Sticky Container */}
+            <div className="  flex flex-col justify-center overflow-hidden">
+                <Container className="z-10  h-full flex flex-col justify-center py-20">
 
-                <div className="space-y-20 py-24 lg:py-40" >
-                    {/* top side */}
-                    <div className="space-y-8 lg:col-span-4">
+                    <div className="flex flex-col h-full justify-between">
+                        {/* Top: Eyebrow & Standard Heading */}
+                        <Fade className="mt-10 lg:mt-20">
+                            <Eyebrow className="ml-0 mb-6">Who we are</Eyebrow>
+                            <h2 className="text-3xl sm:text-4xl font-semibold">
+                                Two Decades of Craftsmanship
+                            </h2>
+                        </Fade>
 
-                        <Eyebrow className="ml-0">who we are</Eyebrow>
+                        {/* Middle: TextRevealOnScroll Paragraph */}
+                        <div className="max-w-5xl my-10">
+                            <TextRevealOnScroll as="div" className="text-3xl sm:text-4xl lg:text-5xl leading-[1.2] font-medium text-foreground tracking-tight whitespace-pre-line">
+                                Founded over 25 years ago in the heart of India's brass manufacturing belt, Swastik Brass Components has grown from a local supplier into a globally trusted exporter of precision engineered brass parts for the world's most demanding industries.
+                            </TextRevealOnScroll>
+                        </div>
 
-                        <TextRevealOnScroll as="h2" className="leading-tight whitespace-pre-line">
-
-                            {`Two Decades of\ncraftsmanship`}
-                        </TextRevealOnScroll>
-                    </div>
-
-                    {/* circles */}
-                    <DesktopCircles />
-                    <MobileCircles />
-
-
-                    <div className="relative grid grid-cols-1 md:grid-cols-4 -translate-y-16 xl:translate-y-0">
-
-                        <div className="space-y-4 md:col-span-3 md:col-start-2">
+                        {/* Bottom: Footer / Stats / CTAs Grid */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-border/50 pt-10 pb-10">
                             <Fade>
-                                <p className="text-3xl sm:text-4xl font-semibold max-w-xl">
-                                    Driven by technology, backed  by experience, focused on  <span className="text-primary">
-                                        manufacturing</span> excellence
+                                <p className="text-lg text-muted-foreground max-w-md">
+                                    State-of-the-art CNC turning, automatic screw machines, and in-house quality labs engineered for excellence.
                                 </p>
                             </Fade>
-                            <Fade>
-
-                                <p className="max-w-xl">Founded over 25 years ago in the heart of India's brass manufacturing belt, Swastik Brass Components has grown from a local supplier into a globally trusted exporter of precision engineered brass parts.</p>
-                            </Fade>
-                            <Fade>
-
-                                <p className="max-w-xl">Our facility houses state-of-the-art CNC turning, automatic screw machines, and in-house quality labs — enabling us to produce complex geometries to the tightest tolerances across a wide range of brass alloys.</p>
-                            </Fade>
-
-                            <div className="flex gap-5">
+                            <div className="flex flex-col sm:flex-row gap-5 md:justify-end items-start md:items-center">
                                 <Fade>
-
-                                    <CustomLink variant="button-black" href={"/about"} >
+                                    <CustomLink variant="button-white" href={"/about"}>
                                         Know more
                                         <Arrow variant="primary" />
                                     </CustomLink>
                                 </Fade>
                                 <Fade delay={0.2} className="flex">
-                                    <CustomLink variant="hover-underline" href={"/quote"} className="text-primary">
+                                    <CustomLink variant="hover-underline" href={"/quote"} className="text-primary font-medium flex items-center gap-2">
                                         Download brochure
-                                        <icons.download />
+                                        <icons.download className="w-5 h-5" />
                                     </CustomLink>
                                 </Fade>
                             </div>
                         </div>
-
-
                     </div>
-                </div>
-
-
-            </Container>
-        </Section >
+                </Container>
+            </div>
+        </Section>
     )
 }
 
