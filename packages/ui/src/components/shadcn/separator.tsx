@@ -1,6 +1,6 @@
-import * as React from "react"
+import { cn } from "@super/ui/lib/utils"
 import { Separator as SeparatorPrimitive } from "radix-ui"
-import { cn } from "@swastik/ui/lib/utils"
+import * as React from "react"
 
 
 function Separator({
@@ -24,3 +24,4 @@ function Separator({
 }
 
 export { Separator }
+

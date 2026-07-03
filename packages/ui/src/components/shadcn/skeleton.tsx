@@ -1,4 +1,4 @@
-import { cn } from "@swastik/ui/lib/utils"
+import { cn } from "@super/ui/lib/utils"
 
 
 function Skeleton({ className, ...props }: React.ComponentProps<"div">) {
@@ -12,3 +12,4 @@ function Skeleton({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 export { Skeleton }
+

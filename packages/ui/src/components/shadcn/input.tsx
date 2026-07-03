@@ -1,4 +1,4 @@
-import { cn } from "@swastik/ui/lib/utils"
+import { cn } from "@super/ui/lib/utils"
 import * as React from "react"
 
 
@@ -17,3 +17,4 @@ function Input({ className, type, ...props }: React.ComponentProps<"input">) {
 }
 
 export { Input }
+

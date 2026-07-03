@@ -9,7 +9,7 @@ import {
 } from "motion/react"
 import { memo } from "react"
 
-import { cn } from "@swastik/ui/lib/utils"
+import { cn } from "@super/ui/lib/utils"
 
 type AnimationType = "text" | "word" | "character" | "line"
 type AnimationVariant =

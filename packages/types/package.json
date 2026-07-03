@@ -1,5 +1,5 @@
 {
-  "name": "@swastik/types",
+  "name": "@super/types",
   "version": "0.0.0",
   "private": true,
   "exports": {
@@ -10,7 +10,7 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@swastik/typescript-config": "workspace:*",
+    "@super/typescript-config": "workspace:*",
     "typescript": "5.9.2"
   },
   "dependencies": {

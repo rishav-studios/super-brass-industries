@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
-    "@swastik/supabase": "workspace:*",
-    "@swastik/types": "workspace:*",
-    "@swastik/ui": "workspace:*",
+    "@super/supabase": "workspace:*",
+    "@super/types": "workspace:*",
+    "@super/ui": "workspace:*",
     "motion": "^12.40.0",
     "next": "16.2.0",
     "react": "^19.2.0",
@@ -23,8 +23,8 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@swastik/eslint-config": "workspace:*",
-    "@swastik/typescript-config": "workspace:*",
+    "@super/eslint-config": "workspace:*",
+    "@super/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.3.0",
     "@types/node": "^22.15.3",
     "@types/react": "19.2.2",

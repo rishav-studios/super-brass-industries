@@ -1,7 +1,7 @@
-import * as React from "react"
+import { cn } from "@super/ui/lib/utils"
 import { cva, type VariantProps } from "class-variance-authority"
 import { Slot } from "radix-ui"
-import { cn } from "@swastik/ui/lib/utils"
+import * as React from "react"
 
 
 const buttonVariants = cva(
@@ -65,3 +65,4 @@ function Button({
 }
 
 export { Button, buttonVariants }
+

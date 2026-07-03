@@ -1,5 +1,5 @@
 {
-  "name": "@swastik/supabase",
+  "name": "@super/supabase",
   "version": "0.0.0",
   "private": true,
   "main": "./src/index.ts",
@@ -24,8 +24,8 @@
     "react-dom": ">=19.0.0"
   },
   "devDependencies": {
-    "@swastik/eslint-config": "workspace:*",
-    "@swastik/typescript-config": "workspace:*",
+    "@super/eslint-config": "workspace:*",
+    "@super/typescript-config": "workspace:*",
     "next": "16.2.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

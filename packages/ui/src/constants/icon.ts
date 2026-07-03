@@ -86,8 +86,10 @@ export const icons = {
     plane: PlaneTakeoff,
     train: TrainFront,
     car: Car,
-    flame: Flame
+    flame: Flame,
 
+    route: Route,
+    layers2: Layers2
 
 }
 

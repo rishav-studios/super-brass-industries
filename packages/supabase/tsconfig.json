@@ -1,5 +1,5 @@
 {
-  "extends": "@swastik/typescript-config/react-library.json",
+  "extends": "@super/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
     "strictNullChecks": true,
