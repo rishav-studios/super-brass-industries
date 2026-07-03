@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "@swastik/ui/styles/globals.css";
+@import "@super/ui/styles/globals.css";
 
 /* Tell Tailwind v4 to scan the web app's own source files */
 @source "../app/**/*.{ts,tsx}";
@@ -10,9 +10,12 @@
   --animate-spin-slow: spin 20s linear infinite;
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-10px);
     }
@@ -61,9 +64,9 @@
     border-radius: inherit;
     padding: 1.4px;
     background: linear-gradient(180deg,
-      rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 20%,
-      rgba(255,255,255,0) 40%, rgba(255,255,255,0) 60%,
-      rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.45) 100%);
+        rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 20%,
+        rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0.15) 80%, rgba(255, 255, 255, 0.45) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
