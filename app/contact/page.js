@@ -43,12 +43,27 @@ const App = () => {
 
   const onSubmit = async (data) => {
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 900));
-    setSubmitting(false);
-    toast.success('Message received!', {
-      description: `Thank you, ${data.fullName}. Our team will get back to you within one business day.`,
-    });
-    reset();
+    try {
+      const fd = new FormData();
+      fd.append('fullName', data.fullName);
+      fd.append('companyName', data.companyName);
+      fd.append('email', data.email);
+      fd.append('phone', data.phone);
+      fd.append('message', data.message);
+      const res = await fetch('/api/contact', { method: 'POST', body: fd });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || 'Failed to send message');
+      toast.success('Message received!', {
+        description: `Thank you, ${data.fullName}. Our team will get back to you within one business day.`,
+      });
+      reset();
+    } catch (err) {
+      toast.error('Could not send your message', {
+        description: err.message || `Please try again or email us directly at ${SITE.email}.`,
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (

@@ -44,13 +44,35 @@ const App = () => {
 
   const onSubmit = async (data) => {
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 900));
-    setSubmitting(false);
-    toast.success('Quote request submitted!', {
-      description: `Thank you, ${data.fullName}. Our engineering team will send your detailed quotation within 24 hours.`,
-    });
-    reset();
-    setFileName('');
+    try {
+      const file = data.drawing?.[0];
+      if (file && file.size > 20 * 1024 * 1024) {
+        toast.error('File too large', { description: 'Please attach a drawing up to 20 MB.' });
+        setSubmitting(false);
+        return;
+      }
+      const fd = new FormData();
+      fd.append('fullName', data.fullName);
+      fd.append('companyName', data.companyName);
+      fd.append('email', data.email);
+      fd.append('phone', data.phone);
+      fd.append('projectDetails', data.projectDetails);
+      if (file) fd.append('drawing', file);
+      const res = await fetch('/api/quote', { method: 'POST', body: fd });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || 'Failed to submit quote request');
+      toast.success('Quote request submitted!', {
+        description: `Thank you, ${data.fullName}. Our engineering team will send your detailed quotation within 24 hours.`,
+      });
+      reset();
+      setFileName('');
+    } catch (err) {
+      toast.error('Could not submit your request', {
+        description: err.message || 'Please try again or email us your drawing directly.',
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const drawingReg = register('drawing');

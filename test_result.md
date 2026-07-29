@@ -105,6 +105,48 @@
 user_problem_statement: "Build a premium industrial website for Super Brass Industries, a brass components manufacturer in Jamnagar (est. 2021). Pages: home (hero, about snippet, exports, stats, industries, 8 categories, FAQs, OEM highlight, CTA), about (journey 2021-2026, vision/mission, certificates), contact form, quote request form (with drawing upload), privacy/terms/quality policy pages, dedicated component pages. Brand color #1a2845, light theme, Next.js + Tailwind + motion.dev. Forms use react-hook-form + zod (NO backend submission logic per user - frontend only, simulated submit with toast). Placeholder contact details, standard industry certificates, stock images (category images are mocks to be replaced by user)."
 
 backend:
+  - task: "POST /api/contact - Resend email + MongoDB save"
+    implemented: true
+    working: true
+    file: "/app/app/api/[[...path]]/route.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Accepts FormData (fullName, companyName, email, phone, message). Saves to MongoDB 'submissions' collection (UUID id), sends email via Resend to EMAIL_TO with replyTo=visitor, sends auto-reply to visitor (non-blocking). Returns 400 on invalid payload, 502 on Resend error."
+      - working: true
+        agent: "testing"
+        comment: "TESTED & VERIFIED: All test cases passed. Valid submission returns 200 {ok: true, id: resendId}, email sent successfully via Resend (emailStatus: 'sent'). Validation working correctly: missing fullName returns 400, invalid email format returns 400, missing message returns 400. MongoDB persistence confirmed. No domain verification errors."
+  - task: "POST /api/quote - Resend email with attachment + MongoDB save"
+    implemented: true
+    working: true
+    file: "/app/app/api/[[...path]]/route.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Accepts FormData (fullName, companyName, email, phone, projectDetails, optional 'drawing' file). Validates file ext (pdf/dwg/dxf/step/stp/igs/iges/jpg/jpeg/png) and 20MB cap (413). Attaches file base64 to Resend email. Saves submission to MongoDB with attachment metadata."
+      - working: true
+        agent: "testing"
+        comment: "TESTED & VERIFIED: All test cases passed. Valid submission without file returns 200, valid submission with PDF attachment returns 200 (file attached correctly via base64). Validation working: unsupported file type (.txt) returns 400, missing projectDetails returns 400. MongoDB saves attachment metadata correctly. Emails sent successfully."
+  - task: "GET /api/submissions - list saved submissions"
+    implemented: true
+    working: true
+    file: "/app/app/api/[[...path]]/route.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Returns latest 50 submissions from MongoDB, _id excluded (UUID 'id' field used)."
+      - working: true
+        agent: "testing"
+        comment: "TESTED & VERIFIED: Returns 200 with {submissions: [...]} array. All 3 test submissions retrieved correctly with UUID 'id' field (no MongoDB _id leaked). Contains emailStatus field ('sent'), resendId, type, and all form data. Structure correct."
   - task: "Minimal API health route"
     implemented: true
     working: true
@@ -199,14 +241,11 @@ frontend:
 metadata:
   created_by: "main_agent"
   version: "1.0"
-  test_sequence: 0
+  test_sequence: 1
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "Contact form (react-hook-form + zod validation, simulated submit with toast)"
-    - "Quote request form (fields + optional drawing file input, zod validation, simulated submit)"
-    - "Home page (hero, marquee, about snippet, OEM highlight, categories, stats, exports, industries, FAQs, CTA)"
+  current_focus: []
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -214,3 +253,7 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "MVP complete. All 10 routes return 200. Forms are intentionally frontend-only (MOCKED submit with toast) per explicit user request - do NOT flag missing backend persistence as a bug. Manual playwright verification done for hero hydration, form validation, form submission toasts on both forms. Awaiting user decision on automated frontend testing."
+  - agent: "main"
+    message: "RESEND INTEGRATION ADDED. Backend now handles POST /api/contact and POST /api/quote (multipart FormData), saves to MongoDB 'submissions' (UUID ids), sends real emails via Resend (RESEND_API_KEY in .env, from noreply@superbrassindustries.com to info@superbrassindustries.com, replyTo=visitor). Frontend forms now POST real FormData. IMPORTANT FOR TESTING: (1) Each successful POST sends REAL emails (team + auto-reply) - keep successful sends to a minimum (2-3 max) to respect Resend free tier 100/day. (2) If Resend returns 403/validation error about domain, it means user's verified domain differs from superbrassindustries.com - report the exact error message back. (3) Validation cases (400/413/unsupported file) send no email - test freely. (4) GET /api/submissions should show saved records even if email fails (emailStatus field: pending/sent/failed)."
+  - agent: "testing"
+    message: "BACKEND TESTING COMPLETE - ALL TESTS PASSED ✅. Tested all 3 backend endpoints (contact, quote, submissions) plus health check. Results: (1) POST /api/contact: Valid submission works (200, email sent), all validation cases work (400 for missing fields/invalid email). (2) POST /api/quote: Valid submissions work with and without PDF attachment (200, emails sent), file type validation works (400 for .txt), missing field validation works (400). (3) GET /api/submissions: Returns correct structure with UUID ids (no _id leak), emailStatus field present, all 3 test submissions retrieved. (4) Resend integration working perfectly - NO domain verification errors, all emails sent successfully (emailStatus: 'sent'). Total: 10/10 tests passed, 3 emails sent (within limit). Backend is production-ready."
