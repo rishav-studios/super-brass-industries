@@ -10,10 +10,13 @@ import {
     DropdownMenuTrigger,
 } from "@super/ui/components/shadcn/dropdown-menu";
 
+import { cn } from "@super/ui/lib/utils";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
+import Logo from "../pages/home/hero/Logo";
 import { Arrow, CustomLink } from "../shared/clickables/CustomLink";
+import { buttonBaseClasses } from "../shared/clickables/variantClasses";
 
 type NavLink = {
     name: string,
@@ -192,11 +195,18 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
     const { scrollY } = useScroll();
     const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+    const color = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 1)"])
+    const textColor = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgba(255, 255, 255, 1)", "rgba(0, 0, 0, 1)"])
+    const logoColor = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgba(255, 255, 255, 1)", "rgb(26, 40, 69)"])
+    const linkColor = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgba(255, 255, 255, 1)", "rgb(26, 40, 69)"])
+    const linkTextColor = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgba(0, 0, 0, 1)", "rgba(255, 255, 255, 1)"])
+    const arrowColor = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgb(26, 40, 69)", "rgba(255, 255, 255, 1)"])
+    const boxShadow = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["", "0 4px 6px -1px rgba(26, 40, 69, 0.3)"])
     // Each value is mapped directly from scroll position — no boolean, no state
-    const y = useTransform(scrollY, [SCROLL_START, SCROLL_END], [64, 18]);
+    const y = useTransform(scrollY, [SCROLL_START, SCROLL_END], [40, 18]);
     const width = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["100%", "90%"]);
     const innerContainerWidth = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["90%", "99%"]);
-    const borderRadius = useTransform(scrollY, [SCROLL_START, SCROLL_END], [0, 16])
+    const borderRadius = useTransform(scrollY, [SCROLL_START, SCROLL_END], [0, 12])
     const innerContainerPaddingLeft = useTransform(scrollY, [SCROLL_START, SCROLL_END], [0, 16]);
 
     return (
@@ -212,22 +222,24 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
                 <motion.div
                     style={{
                         width,
-                        borderRadius
+                        borderRadius,
+                        backgroundColor: color,
+                        boxShadow
 
                     }}
-                    className="mx-auto bg-white"
+                    className={cn("mx-auto",)}
                 >
-                    {/* Containe component */}
+                    {/* Container component */}
                     <motion.div
                         style={{
                             width: innerContainerWidth,
                             paddingLeft: innerContainerPaddingLeft
                         }}
                         className=" mx-auto flex items-center h-16 gap-12">
-                        <div className="h-16 py-4">
-                            <CustomLink variant="custom" href="/">
+                        <div className="h-16 py-4 relative">
+                            <CustomLink variant="custom" href="/" isNormal>
 
-                                <img className="w-full h-full" src="/logo-main.svg" alt="Logo" />
+                                <Logo className="h-full w-max" style={{ fill: logoColor }} />
                             </CustomLink>
                         </div>
                         <div className="flex gap-6">
@@ -235,7 +247,8 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
                                 <CustomLink
                                     key={i}
                                     href={link.href}
-                                    className="text-black hover:text-primary transition-colors"
+                                    className=" transition-colors"
+                                    style={{ color: textColor }}
                                 >
                                     {link.name}
                                 </CustomLink>
@@ -243,9 +256,9 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
                         </div>
                         <div className="flex ml-auto gap-6">
 
-                            <CustomLink variant="button-brand">
+                            <CustomLink href="/quote" variant="custom" className={cn(buttonBaseClasses, "pr-2")} style={{ backgroundColor: linkColor, color: linkTextColor }}>
                                 Request a Quote
-                                <Arrow variant="white" />
+                                <Arrow variant="primary" style={{ backgroundColor: arrowColor, color: linkColor }} />
                             </CustomLink>
                         </div>
                     </motion.div>

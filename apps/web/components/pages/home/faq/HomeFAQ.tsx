@@ -4,72 +4,52 @@ import Fade from "@/components/animations/Fade";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import { Arrow, CustomLink } from "@/components/shared/clickables/CustomLink";
-import { Eyebrow } from "@/components/shared/SectionHeader";
+import { EyeBrowSimple } from "@/components/shared/SectionHeader";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@super/ui/components/shadcn/accordion";
 
-const FAQS = [
-    {
-        question: "What materials do you specialize in?",
-        answer: "We specialize in high-grade brass (including free-cutting brass and custom alloys), ensuring optimal machinability and durability for precision components."
-    },
-    {
-        question: "Do you accommodate custom designs and prototyping?",
-        answer: "Yes, our engineering team works closely with clients from initial CAD designs and rapid prototyping all the way to full-scale mass production."
-    },
-    {
-        question: "What is your minimum order quantity (MOQ)?",
-        answer: "Our MOQs are flexible and depend on the complexity of the part. We cater to both small-batch specialized orders and high-volume continuous runs."
-    },
-    {
-        question: "How do you ensure quality control?",
-        answer: "We are ISO 9001:2015 certified and utilize state-of-the-art CMM and automated optical inspection systems to guarantee zero defects."
-    },
-    {
-        question: "What are your standard lead times?",
-        answer: "Lead times vary by order size and complexity, but our extensive raw material stock and efficient logistics typically allow for rapid turnaround times."
-    }
+export const FAQS = [
+    { q: 'What is your minimum order quantity (MOQ)?', a: 'Our MOQ is flexible and depends on the component complexity and size. For standard components we typically start from 1,000 pieces, while for custom-developed parts we can support prototype and pilot quantities before scaling to full production.' },
+    { q: 'Can you manufacture parts from our drawings or samples?', a: 'Yes \u2014 that is our core strength as OEM manufacturers. Share your 2D drawings, 3D models (STEP/IGES) or a physical sample, and our engineering team will review it, suggest optimisations if needed, and deliver a detailed quotation within 24\u201348 hours. All development is protected under NDA.' },
+    { q: 'Which quality certifications do you hold?', a: 'Super Brass Industries operates an ISO 9001:2015 certified quality management system. Our components are RoHS compliant, and we provide material test certificates, dimensional inspection reports and PPAP documentation on request.' },
+    { q: 'What are your typical lead times?', a: 'Standard components ship in 2\u20133 weeks from order confirmation. Custom parts require 3\u20135 weeks including tooling and sample approval. For repeat orders we maintain safety stock programs that can reduce lead times to under a week.' },
+    { q: 'Which brass grades and finishes do you work with?', a: 'We machine CW614N, CW617N, C36000, C38500, DZR and lead-free brass grades. Surface finishes include natural, nickel, tin, zinc, chrome and silver plating \u2014 all with verified plating thickness reports.' },
+    { q: 'Do you export? How are shipments packed?', a: 'Yes, we currently export to 18+ countries across North America, Europe, the Middle East and Oceania. Components are packed in VCI-lined export-grade packaging with full traceability labelling, shipped via sea or air per your Incoterms (FOB, CIF, DDP).' },
 ];
 
 const HomeFAQ = () => {
     return (
-        <Section className="bg-background py-24 lg:py-32">
+        <Section data-testid="faq-section" className="bg-white">
             <Container>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-                    
-                    {/* Left: Heading & CTA */}
-                    <div className="lg:sticky lg:top-32">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div className="lg:col-span-4">
                         <Fade>
-                            <Eyebrow className="ml-0 mb-6">FAQ</Eyebrow>
-                            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight max-w-xl mb-6">
-                                Frequently Asked Questions
+                            <EyeBrowSimple className="mb-2">FAQs</EyeBrowSimple>
+                            <h2 className="font-heading text-3xl lg:text-4xl font-bold tracking-tight text-[#1a2845] leading-[1.12]">
+                                Answers before you ask
                             </h2>
-                            <p className="text-muted-foreground text-lg mb-10 max-w-md">
-                                Everything you need to know about our manufacturing capabilities, processes, and quality standards.
+                            <p className="mt-4 text-slate-600 leading-relaxed">
+                                Everything purchase teams usually want to know. Still have questions? Our team responds within one business day.
                             </p>
-                            
-                            <CustomLink variant="button-white" href="/contact" className="inline-flex">
-                                Talk to an Expert
-                                <Arrow variant="primary" />
+                            <CustomLink variant="button-brand" href="/contact" className="mt-6 inline-flex">
+                                Ask a Question
+                                <Arrow variant="white" />
                             </CustomLink>
                         </Fade>
                     </div>
-
-                    {/* Right: Accordion */}
-                    <Fade delay={0.2} className="w-full">
-                        <Accordion type="single" collapsible className="w-full">
-                            {FAQS.map((faq, index) => (
-                                <AccordionItem key={index} value={`item-${index}`} className="border-border/50 py-2">
-                                    <AccordionTrigger className="text-xl md:text-2xl font-medium text-left hover:no-underline hover:text-primary transition-colors data-[state=open]:text-primary">
-                                        {faq.question}
-                                    </AccordionTrigger>
-                                    <AccordionContent className="text-lg text-muted-foreground leading-relaxed pt-2 pb-6">
-                                        {faq.answer}
-                                    </AccordionContent>
-                                </AccordionItem>
-                            ))}
-                        </Accordion>
-                    </Fade>
-
+                    <div className="lg:col-span-8">
+                        <Fade delay={0.1}>
+                            <Accordion type="single" collapsible className="w-full">
+                                {FAQS.map((f, i) => (
+                                    <AccordionItem key={i} value={`faq-${i}`} className="border-slate-200" data-testid={`faq-item-${i}`}>
+                                        <AccordionTrigger className="text-left text-base font-semibold text-[#1a2845] hover:text-[#1a2845]/70 hover:no-underline py-5">
+                                            {f.q}
+                                        </AccordionTrigger>
+                                        <AccordionContent className="text-slate-600 text-base leading-relaxed pb-5">{f.a}</AccordionContent>
+                                    </AccordionItem>
+                                ))}
+                            </Accordion>
+                        </Fade>
+                    </div>
                 </div>
             </Container>
         </Section>

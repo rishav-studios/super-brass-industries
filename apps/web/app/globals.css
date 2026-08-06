@@ -72,4 +72,9 @@
     mask-composite: exclude;
     pointer-events: none;
   }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, #c8ccd4 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
 }

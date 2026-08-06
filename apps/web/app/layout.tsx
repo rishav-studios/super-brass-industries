@@ -15,8 +15,8 @@ const ArchivoFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "swastik brass components",
-  description: "swastik brass components",
+  title: "super brass industries",
+  description: "Precision Brass Components Manufacturer. Custom CNC Turning, Machining, Threading, and Export Packing with Zero Defect Quality and 24-Hour Quotation Turnaround.",
 };
 
 export default async function RootLayout({

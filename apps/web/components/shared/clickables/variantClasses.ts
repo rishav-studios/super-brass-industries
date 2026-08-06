@@ -11,7 +11,7 @@ export type ClickableVariants =
     | "gradient-glow"
     | "custom";
 
-const buttonBaseClasses = "py-2 px-6 rounded-xl flex items-center justify-center gap-2";
+export const buttonBaseClasses = "py-2 px-6 rounded-md flex items-center justify-center gap-2";
 
 export const variantClasses: Record<Exclude<ClickableVariants, "custom">, {
     base?: string,

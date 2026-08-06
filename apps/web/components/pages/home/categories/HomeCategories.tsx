@@ -1,117 +1,119 @@
 "use client";
 
-import Fade from "@/components/animations/Fade"
-import Container from "@/components/layout/Container"
-import Section from "@/components/layout/Section"
-import { Eyebrow } from "@/components/shared/SectionHeader"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@super/ui/components/shadcn/carousel"
-import Image from "next/image"
-
-const CATEGORIES = [
-    {
-        title: "Brass Male Female Parts",
-        image: "/about-parts.png", 
-        description: "Precision-engineered male and female threaded parts."
-    },
-    {
-        title: "Brass Screws",
-        image: "/materials-steel.png", 
-        description: "High-strength brass screws for reliable fastening."
-    },
-    {
-        title: "Brass Inserts",
-        image: "/materials-brass.png", 
-        description: "Durable brass inserts for plastic and wood molding."
-    },
-    {
-        title: "Brass Turned Components",
-        image: "/materials-aluminium.png", 
-        description: "Custom turned components crafted to tight tolerances."
-    },
-    {
-        title: "Brass Fasteners",
-        image: "/sectors/aerospace.png", 
-        description: "A wide variety of standard and custom brass fasteners."
-    },
-    {
-        title: "Brass Electrical Accessories",
-        image: "/sectors/railway.png", 
-        description: "Conductive brass components for electrical applications."
-    },
-    {
-        title: "Brass Fittings",
-        image: "/sectors/oil-gas.png", 
-        description: "Leak-proof brass fittings for plumbing and gas lines."
-    },
-    {
-        title: "Brass Automotive Parts",
-        image: "/sectors/automobile.png", 
-        description: "High-performance brass parts for the automotive industry."
-    },
-]
+import Container from "@/components/layout/Container";
+import { EyeBrowSimple } from "@/components/shared/SectionHeader";
+import { CATEGORIES, Category } from "@/constants/categories";
+import { icons } from "@super/ui";
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 const HomeCategories = () => {
+    const wrapRef = useRef(null);
+    const [cardVw, setCardVw] = useState(33.3333);
+
+    useEffect(() => {
+        const calc = () => {
+            const w = window.innerWidth;
+            setCardVw(w < 640 ? 84 : w < 1024 ? 50 : 33.3333);
+        };
+        calc();
+        window.addEventListener('resize', calc);
+        return () => window.removeEventListener('resize', calc);
+    }, []);
+
+    const distance = Math.max(0, CATEGORIES.length * cardVw - 86);
+
+    const { scrollYProgress } = useScroll({ target: wrapRef, offset: ['start start', 'end end'] });
+    const x = useTransform(scrollYProgress, [0, 1], ['5%', `-${distance}vw`]);
+
+    // Derive current card index from scroll progress for the counter
+    const currentIndex = useTransform(scrollYProgress, [0, 1], [1, CATEGORIES.length]);
+
     return (
-        <Section className="bg-background py-24 lg:py-32 overflow-hidden">
-            <Container>
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                    <Fade>
-                        <Eyebrow className="ml-0 mb-6">Categories</Eyebrow>
-                        <h2 className="text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
-                            Categories We Serve
+        <section ref={wrapRef} style={{ minHeight: `${100 + distance * 1.1}vh` }} className="bg-[#f4f5f7] pb-24" data-testid="categories-section">
+            <div className="sticky top-0 h-screen w-full overflow-hidden  flex flex-col">
+
+
+
+                {/* Header */}
+                <Container className="relative mt-24 lg:mt-24">
+                    <div className="">
+
+                        <EyeBrowSimple>Our Product Range</EyeBrowSimple>
+                        <h2 className="font-heading text-3xl lg:text-4xl font-bold tracking-tight text-[#1a2845] max-w-xl leading-[1.12]">
+                            Many categories. One quality standard.
                         </h2>
-                    </Fade>
-                    <Fade delay={0.2}>
-                        <p className="text-muted-foreground max-w-sm text-lg">
-                            Discover our wide range of precision brass components engineered for global industries.
-                        </p>
-                    </Fade>
+
+                    </div>
+                    <div className="absolute w-full max-w-1/2 inset-0 top-1/2 translate-x-full">
+                        <div className="flex items-center gap-4">
+                            <div className="flex-1 h-0.75 w-full bg-slate-200 rounded-full overflow-hidden">
+                                <motion.div className="h-full bg-[#1a2845] rounded-full origin-left" style={{ scaleX: scrollYProgress }} />
+                            </div>
+                            <div className="flex items-baseline gap-1 shrink-0 tabular-nums">
+                                <motion.span className="text-sm font-bold text-[#1a2845]">
+                                    {/* Render as rounded integer */}
+                                    <CounterDisplay value={currentIndex} />
+                                </motion.span>
+                                <span className="text-xs text-slate-400 font-medium">
+                                    / {String(CATEGORIES.length).padStart(2, '0')}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+
+                {/* Track */}
+                <div className="relative flex-1 flex items-center overflow-hidden mt-4">
+                    <motion.div className="flex gap-4 will-change-transform" style={{ x }}>
+                        {CATEGORIES.map((cat: Category, i) => (
+                            <div key={cat.slug} style={{ width: `${cardVw}vw` }} className="shrink-0 ">
+                                <Link
+                                    href={`/components/${cat.slug}`}
+                                    className="group flex flex-col bg-white rounded-xl border border-slate-200/80 shadow-sm hover:border-[#1a2845]/40 hover:shadow-xl transition-all duration-300"
+                                    data-testid={`category-card-${cat.slug}`}
+                                >
+                                    <div className="relative h-72 min-h-50 overflow-hidden rounded-t-xl">
+                                        <img src={cat.image} alt={cat.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 pointer-events-none" />
+                                        <div className="absolute inset-0 bg-transparent" />
+                                        <span className="absolute top-4 left-4 bg-muted backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-[0.15em] text-[#1a2845]">
+                                            {String(i + 1).padStart(2, '0')} / {String(CATEGORIES.length).padStart(2, '0')}
+                                        </span>
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="font-heading text-lg font-bold text-[#1a2845]">{cat.title}</h3>
+                                        <p className="mt-2 text-sm text-slate-500 leading-relaxed line-clamp-2">{cat.description}</p>
+                                        <span className="mt-5 inline-flex items-center text-xs font-semibold uppercase tracking-[0.15em] text-[#1a2845] group-hover:text-primary transition-colors">
+                                            View Details <icons.arrowRight className="ml-1 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                                        </span>
+                                    </div>
+                                </Link>
+                            </div>
+                        ))}
+                    </motion.div>
                 </div>
 
-                <Fade delay={0.3} className="w-full">
-                    <Carousel
-                        opts={{
-                            align: "start",
-                            loop: false,
-                        }}
-                        className="w-full"
-                    >
-                        <CarouselContent className="-ml-4 md:-ml-6">
-                            {CATEGORIES.map((category, index) => {
-                                return (
-                                    <CarouselItem key={index} className="pl-4 md:pl-6 basis-full md:basis-1/2 lg:basis-1/3">
-                                        <div className="group relative h-[450px] w-full flex flex-col justify-end p-8 rounded-2xl overflow-hidden cursor-pointer">
-                                            <Image 
-                                                src={category.image} 
-                                                alt={category.title} 
-                                                fill 
-                                                className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                            />
-                                            {/* Gradient Overlay for Text Readability */}
-                                            <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent pointer-events-none transition-opacity duration-500 group-hover:opacity-80" />
-                                            
-                                            <div className="relative z-10 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                                <h3 className="text-2xl font-semibold mb-3 tracking-tight">
-                                                    {category.title}
-                                                </h3>
-                                                <p className="text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                                    {category.description}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </CarouselItem>
-                                )
-                            })}
-                        </CarouselContent>
-                        <div className="flex justify-end gap-4 mt-8">
-                            <CarouselPrevious className="position-static transform-none h-12 w-12 rounded-full border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" />
-                            <CarouselNext className="position-static transform-none h-12 w-12 rounded-full border-border hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors" />
-                        </div>
-                    </Carousel>
-                </Fade>
-            </Container>
-        </Section>
-    )
+
+            </div>
+        </section>
+    );
+}
+
+/** Displays a MotionValue as a zero-padded integer (01, 02, …) */
+function CounterDisplay({ value }: { value: MotionValue<number> }) {
+    const ref = useRef<HTMLSpanElement>(null);
+
+    useEffect(() => {
+        const unsubscribe = value.on("change", (latest: number) => {
+            if (ref.current) {
+                ref.current.textContent = String(Math.round(latest)).padStart(2, '0');
+            }
+        });
+        return unsubscribe;
+    }, [value]);
+
+    return <span ref={ref}>01</span>;
 }
 
 export default HomeCategories
