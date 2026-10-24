@@ -5,10 +5,12 @@ import { EyeBrowSimple } from "@/components/shared/SectionHeader";
 import { CATEGORIES, Category } from "@/constants/categories";
 import { icons } from "@super/ui";
 import { motion, MotionValue, useScroll, useTransform } from "motion/react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const HomeCategories = () => {
+    const t = useTranslations('HomeCategories');
     const wrapRef = useRef(null);
     const [cardVw, setCardVw] = useState(33.3333);
 
@@ -40,9 +42,9 @@ const HomeCategories = () => {
                 <Container className="relative mt-24 lg:mt-24">
                     <div className="">
 
-                        <EyeBrowSimple>Our Product Range</EyeBrowSimple>
+                        <EyeBrowSimple>{t('eyebrow')}</EyeBrowSimple>
                         <h2 className="font-heading text-3xl lg:text-4xl font-bold tracking-tight text-[#1a2845] max-w-xl leading-[1.12]">
-                            Many categories. One quality standard.
+                            {t('heading')}
                         </h2>
 
                     </div>
@@ -70,7 +72,7 @@ const HomeCategories = () => {
                         {CATEGORIES.map((cat: Category, i) => (
                             <div key={cat.slug} style={{ width: `${cardVw}vw` }} className="shrink-0 ">
                                 <Link
-                                    href={`/components/${cat.slug}`}
+                                    href={`/categories/${cat.slug}`}
                                     className="group flex flex-col bg-white rounded-xl border border-slate-200/80 shadow-sm hover:border-[#1a2845]/40 hover:shadow-xl transition-all duration-300"
                                     data-testid={`category-card-${cat.slug}`}
                                 >
@@ -85,7 +87,7 @@ const HomeCategories = () => {
                                         <h3 className="font-heading text-lg font-bold text-[#1a2845]">{cat.title}</h3>
                                         <p className="mt-2 text-sm text-slate-500 leading-relaxed line-clamp-2">{cat.description}</p>
                                         <span className="mt-5 inline-flex items-center text-xs font-semibold uppercase tracking-[0.15em] text-[#1a2845] group-hover:text-primary transition-colors">
-                                            View Details <icons.arrowRight className="ml-1 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                                            {t('viewDetails')} <icons.arrowRight className="ml-1 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                                         </span>
                                     </div>
                                 </Link>

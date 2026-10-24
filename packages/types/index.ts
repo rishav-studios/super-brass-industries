@@ -8,3 +8,4 @@ export * from "./src/product.schema";
 export * from "./src/sector.schema";
 export * from "./src/seo.schema";
 export * from "./src/user.schema";
+export { z } from "zod";

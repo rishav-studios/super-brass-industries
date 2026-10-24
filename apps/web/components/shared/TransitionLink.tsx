@@ -1,9 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/navigation";
 import { usePageTransition } from "@/components/providers/PageTransitionProvider";
 import { ComponentProps } from "react";
-import { usePathname } from "next/navigation";
 
 type TransitionLinkProps = ComponentProps<typeof Link>;
 

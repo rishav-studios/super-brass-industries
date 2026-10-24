@@ -7,27 +7,18 @@ import { CustomLink } from "@/components/shared/clickables/CustomLink"
 import ImageReveal from "@/components/shared/ImageReveal"
 import { EyeBrowSimple } from "@/components/shared/SectionHeader"
 import { icons } from "@super/ui"
-
-const CREDENTIALS = [
-    {
-        icon: icons.shieldCheck,
-        label: "ISO 9001:2015 Certified QMS",
-    },
-    {
-        icon: icons.globe,
-        label: "Exports to 18+ Countries",
-    },
-    {
-        icon: icons.factory,
-        label: "In-house CNC & Traub Setup",
-    },
-    {
-        icon: icons.checkCircle2,
-        label: "100% Batch Inspection",
-    },
-]
+import { useTranslations } from "next-intl"
 
 const HomeAbout = () => {
+    const t = useTranslations('HomeAbout');
+
+    const CREDENTIALS = [
+        { icon: icons.shieldCheck, label: t('credentials.iso') },
+        { icon: icons.globe, label: t('credentials.exports') },
+        { icon: icons.factory, label: t('credentials.cnc') },
+        { icon: icons.checkCircle2, label: t('credentials.inspection') },
+    ];
+
     return (
         <Section className="relative bg-white overflow-visible">
             <Container className="z-10 h-full flex flex-col justify-center">
@@ -36,7 +27,7 @@ const HomeAbout = () => {
                     {/* ── Left: Image with Est. Badge ── */}
                     <div className="relative h-full">
                         <ImageReveal
-                            src="/about-parts.png"
+                            src="/all-products.webp"
                             alt="Super Brass Industries precision brass components displayed on an engineering blueprint"
                             // aspectRatio="aspect-[4/5]"
                             className="rounded-lg h-full"
@@ -47,10 +38,10 @@ const HomeAbout = () => {
                         <Fade delay={0.6} className="absolute -bottom-6 -right-4 lg:-right-8 z-10">
                             <div className="bg-primary text-white px-8 py-5 rounded-lg shadow-xl">
                                 <p className="text-2xl sm:text-3xl font-bold tracking-tight leading-none">
-                                    Est. 2012
+                                    {t('badge.year')}
                                 </p>
                                 <p className="text-[11px] uppercase tracking-[0.2em] text-white/70 mt-1">
-                                    Jamnagar, Gujarat
+                                    {t('badge.location')}
                                 </p>
                             </div>
                         </Fade>
@@ -59,26 +50,23 @@ const HomeAbout = () => {
                     {/* ── Right: Content ── */}
                     <div className="flex flex-col gap-8 lg:pl-4 pt-8 lg:pt-0">
                         <div className="">
-                            <EyeBrowSimple>who we are</EyeBrowSimple>
+                            <EyeBrowSimple>{t('eyebrow')}</EyeBrowSimple>
                             {/* Heading */}
                             <Fade>
                                 <h2 className="text-3xl sm:text-4xl font-semibold leading-tight tracking-tight text-foreground">
-                                    From the brass city of India, to production lines worldwide
+                                    {t('heading')}
                                 </h2>
                             </Fade>
                         </div>
 
                         {/* Body — scroll-reveal text */}
                         <div className="flex flex-col gap-6">
-                            <p
-                                className="text-lg sm:text-xl leading-relaxed font-normal text-foreground">
-                                Super Brass Industries was established in 2012 in Jamnagar — the city that produces over 70% of India's brass components. In just over a decade we have grown into a trusted OEM partner for automotive, electrical and gas industry manufacturers across 18+ countries.
+                            <p className="text-lg sm:text-xl leading-relaxed font-normal text-foreground">
+                                {t('p1')}
                             </p>
 
-                            <p
-                                className="text-lg sm:text-xl leading-relaxed font-normal text-foreground"
-                            >
-                                With in-house CNC turning, traub machining, threading, plating coordination and a fully equipped inspection lab, we control every stage of production — so you receive components that fit right, first time, every time.
+                            <p className="text-lg sm:text-xl leading-relaxed font-normal text-foreground">
+                                {t('p2')}
                             </p>
                         </div>
 
@@ -101,7 +89,7 @@ const HomeAbout = () => {
                         {/* CTA */}
                         <Fade delay={0.4}>
                             <CustomLink variant="hover-underline" href="/about" isNormal className="text-primary font-medium flex items-center gap-2 w-max text-sm">
-                                Learn more about us
+                                {t('cta')}
                                 <icons.externalLink className="w-4 h-4" />
                             </CustomLink>
                         </Fade>

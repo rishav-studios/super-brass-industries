@@ -1,0 +1,262 @@
+{
+  "Navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "categories": "Catégories",
+    "contact": "Contact",
+    "requestQuote": "Demander un devis"
+  },
+  "Footer": {
+    "tagline": "Livraison de composants usinés de précision aux industries les plus exigeantes du monde depuis 2012. Construits sur la qualité, développés par l'ingénierie.",
+    "company": "Entreprise",
+    "categories": "Catégories",
+    "contactUs": "Nous contacter",
+    "businessHours": "Heures d'ouverture",
+    "businessHoursValue": "Samedi–Jeudi\n8h00 à 20h00 IST",
+    "viewAllCategories": "Voir toutes les catégories",
+    "globalAvailability": "Disponibilité mondiale & Heures de bureau",
+    "indiaTime": "Inde (IST)",
+    "europeTime": "Europe (EU)",
+    "usaEastTime": "USA Est (EST)",
+    "usaWestTime": "USA Ouest (PST)",
+    "copyright": "Super Brass Industries. Tous droits réservés.",
+    "links": {
+      "about": "À propos de nous",
+      "categories": "Catégories",
+      "contact": "Contact",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "quality": "Politique qualité"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Certifié ISO 9001:2015 • Jamnagar, Inde",
+    "titleLine1": "Composants en laiton",
+    "titleLine2": "de précision,",
+    "titleLine3": "Conçus",
+    "titleLine4": "pour les OEM mondiaux",
+    "subtitle": "Des pièces automobiles aux broches électriques — Super Brass Industries fabrique plus de 10 millions de composants en laiton de précision par an pour des fabricants dans 18+ pays. Votre dessin, notre savoir-faire.",
+    "ctaQuote": "Demander un devis",
+    "ctaExplore": "Explorer les catégories",
+    "badge1": "Réponse devis en 24h",
+    "badge2": "±0,005 mm de tolérance",
+    "badge3": "100% des lots inspectés",
+    "stat1Label": "Composants / An",
+    "stat2Label": "Pays exportateurs",
+    "stat3Label": "mm de tolérance",
+    "stat4Label": "Délai de devis"
+  },
+  "HomeAbout": {
+    "eyebrow": "qui nous sommes",
+    "heading": "De la ville du laiton de l'Inde aux lignes de production mondiales",
+    "p1": "Super Brass Industries a été fondée en 2012 à Jamnagar — la ville qui produit plus de 70 % des composants en laiton indiens. En un peu plus d'une décennie, nous sommes devenus un partenaire OEM de confiance pour les fabricants des secteurs automobile, électrique et gazier dans 18+ pays.",
+    "p2": "Avec le tournage CNC, l'usinage traub, le filetage, la coordination de placage et un laboratoire de contrôle entièrement équipé en interne, nous contrôlons chaque étape de la production — pour que vous receviez des composants qui s'adaptent parfaitement, du premier coup, à chaque fois.",
+    "cta": "En savoir plus sur nous",
+    "credentials": {
+      "iso": "QMS certifié ISO 9001:2015",
+      "exports": "Exportations vers 18+ pays",
+      "cnc": "Installation CNC & Traub en interne",
+      "inspection": "Inspection 100% par lot"
+    },
+    "badge": {
+      "year": "Fondé en 2012",
+      "location": "Jamnagar, Gujarat"
+    }
+  },
+  "HomeOEM": {
+    "eyebrow": "Directement à la source",
+    "titleLine1": "Nous sommes",
+    "titleLine2": "fabricants OEM.",
+    "subtitle": "Lorsque vous travaillez avec Super Brass Industries, vous travaillez directement avec le sol de l'usine. Pas d'intermédiaires, pas de marges — juste de l'ingénierie de précision, une transparence totale et une confidentialité absolue pour vos pièces propriétaires.",
+    "features": {
+      "drawingTitle": "Du dessin à la livraison",
+      "drawingDesc": "Envoyez un dessin 2D, un modèle 3D ou un échantillon — nous gérons l'outillage, la production, la finition et l'emballage d'exportation.",
+      "inhouseTitle": "Tout en interne",
+      "inhouseDesc": "Tournage CNC, usinage traub, filetage, moletage et inspection sous un même toit.",
+      "ndaTitle": "Développement protégé par NDA",
+      "ndaDesc": "Vos conceptions restent confidentielles. Nous travaillons régulièrement sous NDA avec des OEM mondiaux."
+    },
+    "stats": {
+      "tolerance": "Capacité de tolérance MM",
+      "quotation": "Délai de devis"
+    },
+    "cta": "Obtenir un devis gratuit"
+  },
+  "HomeCategories": {
+    "eyebrow": "Notre gamme de produits",
+    "heading": "De nombreuses catégories. Un seul standard de qualité.",
+    "viewDetails": "Voir les détails"
+  },
+  "HomeIndustries": {
+    "eyebrow": "Secteurs",
+    "heading": "Secteurs que nous servons",
+    "industries": {
+      "automotive": { "name": "Automobile", "desc": "Systèmes de carburant, freinage, capteurs et composants moteur pour OEM et Tier-1." },
+      "electrical": { "name": "Électrique & Électronique", "desc": "Broches, bornes, contacts et connecteurs pour appareillages et appareils." },
+      "gas": { "name": "Gaz & Énergie", "desc": "Vannes, buses et pièces de régulateur critiques pour la sécurité GPL et GNC." },
+      "plumbing": { "name": "Plomberie & Sanitaire", "desc": "Raccords étanches, inserts et composants de vanne pour systèmes hydrauliques." },
+      "marine": { "name": "Marine", "desc": "Corps de connecteurs de précision et composants matériels RF." },
+      "construction": { "name": "Construction", "desc": "Quincaillerie architecturale, ancrages et solutions de fixation." },
+      "agriculture": { "name": "Agriculture", "desc": "Buses de pulvérisation, raccords d'irrigation et composants de pompe." },
+      "railways": { "name": "Chemins de fer", "desc": "Composants haute fiabilité fabriqués selon des spécifications strictes." },
+      "defence": { "name": "Défense", "desc": "Composants haute fiabilité fabriqués selon des spécifications strictes." },
+      "aerospace": { "name": "Aérospatiale", "desc": "Composants haute fiabilité fabriqués selon des spécifications strictes." }
+    }
+  },
+  "HomeStatistics": {
+    "eyebrow": "Notre histoire en chiffres",
+    "headingStart": "Quatre chiffres. Une seule",
+    "headingItalic": "histoire",
+    "headingEnd": "de précision.",
+    "subtitle": "D'une seule machine à Jamnagar aux expéditions sur quatre continents — voici comment Super Brass Industries a grandi, raconté de la seule façon dont les ingénieurs font confiance.",
+    "chapterLabel": "Chapitre",
+    "stats": {
+      "years": "Années d'excellence",
+      "clients": "Clients mondiaux",
+      "components": "Composants / An",
+      "countries": "Pays desservis"
+    },
+    "story": {
+      "ch1Title": "Tout a commencé sur le plancher de l'usine",
+      "ch1Desc": "Depuis 2012, une seule ligne CNC à Jamnagar est devenue une unité d'usinage de précision complète — chaque année avec des tolérances plus serrées et des pièces plus difficiles.",
+      "ch2Title": "Puis le monde a commencé à appeler",
+      "ch2Desc": "Les fabricants et importateurs qui sont arrivés avec un dessin sont restés pour toute leur gamme de composants. La plupart de notre travail vient aujourd'hui de commandes répétées.",
+      "ch3Title": "Le volume a rencontré la précision",
+      "ch3Desc": "Des millions de pièces par an, chacune maintenue à ±0,005 mm et inspectée lot par lot — car à cette échelle, la cohérence est le produit.",
+      "ch4Title": "Et la carte n'a cessé de s'étendre",
+      "ch4Desc": "Nos composants quittent maintenant Jamnagar dans des emballages d'exportation à destination de l'Amérique du Nord, l'Europe, le Moyen-Orient et l'Océanie."
+    },
+    "ctaLabel": "Le prochain chapitre s'écrit généralement avec un dessin et une échéance.",
+    "cta": "Commencez avec un devis"
+  },
+  "Exports": {
+    "eyebrow": "Exportations",
+    "heading": "Nous sommes dans le monde entier.",
+    "countriesHeading": "Pays vers lesquels nous exportons"
+  },
+  "HomeWhyUs": {
+    "eyebrow": "pourquoi nous choisir",
+    "heading": "L'avantage Super Brass",
+    "subtitle": "Livrer la précision à grande échelle sans compromis. Voici pourquoi les leaders de l'industrie nous font confiance pour leurs composants les plus critiques.",
+    "reasons": {
+      "oemTitle": "Fabricant OEM direct",
+      "oemDesc": "Pas de négociants, pas d'intermédiaires. Les prix, les réponses et la responsabilité viennent directement du plancher de production à Jamnagar.",
+      "precisionTitle": "Précision mesurable",
+      "precisionDesc": "Usinage CNC et traub maintenu à ±0,005 mm, vérifié avec des instruments calibrés et des rapports d'inspection documentés.",
+      "quotationTitle": "Devis en 24 heures",
+      "quotationDesc": "Devis vérifiés par des ingénieurs avec tarification, délais et options matériaux livrés en un jour ouvrable.",
+      "isoTitle": "Systèmes ISO 9001:2015",
+      "isoDesc": "Un QMS certifié avec traçabilité complète des matériaux, documentation PPAP et certificats d'essai par lot sur demande.",
+      "logisticsTitle": "Logistique prête à l'export",
+      "logisticsDesc": "Emballage protégé VCI, inspection tierce et expédition FOB/CIF/DDP vers 18+ pays.",
+      "ndaTitle": "Confidentialité totale",
+      "ndaDesc": "Gestion protégée par NDA de vos dessins propriétaires, échantillons et composants développés sur mesure."
+    }
+  },
+  "HomeFAQ": {
+    "eyebrow": "FAQ",
+    "heading": "Des réponses avant que vous posiez la question",
+    "subtitle": "Tout ce que les équipes d'achats veulent généralement savoir. Vous avez encore des questions? Notre équipe répond dans un délai d'un jour ouvrable.",
+    "cta": "Poser une question",
+    "faqs": {
+      "q1": "Quelle est votre quantité minimale de commande (MOQ)?",
+      "a1": "Notre MOQ est flexible et dépend de la complexité et de la taille du composant. Pour les composants standard, nous commençons généralement à partir de 1 000 pièces, tandis que pour les pièces développées sur mesure, nous pouvons prendre en charge des quantités prototypes et pilotes avant de passer à la pleine production.",
+      "q2": "Pouvez-vous fabriquer des pièces à partir de nos dessins ou échantillons?",
+      "a2": "Oui — c'est notre force principale en tant que fabricants OEM. Partagez vos dessins 2D, modèles 3D (STEP/IGES) ou un échantillon physique, et notre équipe d'ingénieurs l'examinera, suggérera des optimisations si nécessaire, et livrera un devis détaillé dans les 24–48 heures. Tout développement est protégé par NDA.",
+      "q3": "Quelles certifications qualité détenez-vous?",
+      "a3": "Super Brass Industries exploite un système de management de la qualité certifié ISO 9001:2015. Nos composants sont conformes RoHS, et nous fournissons sur demande des certificats d'essai des matériaux, des rapports d'inspection dimensionnelle et la documentation PPAP.",
+      "q4": "Quels sont vos délais typiques?",
+      "a4": "Les composants standard sont expédiés 2–3 semaines après confirmation de commande. Les pièces personnalisées nécessitent 3–5 semaines, y compris l'outillage et l'approbation des échantillons. Pour les commandes répétées, nous maintenons des programmes de stock de sécurité pouvant réduire les délais à moins d'une semaine.",
+      "q5": "Avec quels alliages de laiton et finitions travaillez-vous?",
+      "a5": "Nous usinons CW614N, CW617N, C36000, C38500, DZR et des alliages de laiton sans plomb. Les finitions de surface comprennent naturel, nickel, étain, zinc, chrome et placage argent — tous avec des rapports d'épaisseur de placage vérifiés.",
+      "q6": "Exportez-vous? Comment les envois sont-ils emballés?",
+      "a6": "Oui, nous exportons actuellement vers 18+ pays en Amérique du Nord, Europe, Moyen-Orient et Océanie. Les composants sont emballés dans un emballage d'exportation de qualité doublé VCI avec un étiquetage de traçabilité complet, expédiés par mer ou air selon vos Incoterms (FOB, CIF, DDP)."
+    }
+  },
+  "HomeCTA": {
+    "eyebrow": "Démarrez votre projet",
+    "headingStart": "Vous avez un dessin? Obtenez un devis détaillé en",
+    "headingHighlight": "24 heures.",
+    "subtitle": "Envoyez-nous vos spécifications et notre équipe d'ingénieurs répondra avec des prix, des délais et des recommandations de matériaux — sans obligation, entièrement confidentiel.",
+    "ctaQuote": "Demander un devis",
+    "ctaTalk": "Parler à notre équipe"
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "À propos de Super Brass Industries",
+      "titleStart": "Fabriqué à Jamnagar. Approuvé par des fabricants ",
+      "titleHighlight": "du monde entier.",
+      "subtitle": "Depuis 2021, nous fabriquons des composants en laiton de précision pour des entreprises qui ne peuvent se permettre aucune pièce défectueuse. Voici notre histoire."
+    },
+    "intro": {
+      "eyebrow": "Notre fondation",
+      "heading": "Une jeune entreprise avec une obsession à l'ancienne: bien faire les choses",
+      "p1": "Super Brass Industries a été fondée en 2021 à Jamnagar, Gujarat — la capitale incontestée du laiton en Inde. Nos fondateurs ont grandi autour de tours et de centres de tournage, et ont créé l'entreprise avec une conviction simple: les acheteurs mondiaux méritent un fournisseur qui traite leur dessin comme un contrat.",
+      "p2": "Aujourd'hui, nous exploitons une installation moderne avec des centres de tournage CNC, des machines traub haute vitesse, le roulage de filets, le moletage et un laboratoire qualité dédié. En tant que fabricants OEM, nous servons directement les clients des secteurs automobile, électrique, gazier et sanitaire — sans couche commerciale intermédiaire.",
+      "stats": {
+        "established": "Fondé",
+        "team": "Membres d'équipe",
+        "categories": "Catégories de produits"
+      }
+    },
+    "journey": {
+      "eyebrow": "Company Journey",
+      "heading": "2012 → 2026: From a workshop to a global facility",
+      "2012": {
+        "title": "The Beginning",
+        "desc": "Super Brass Industries is founded in Jamnagar — the brass capital of India — with a small workshop and a commitment to precision engineering."
+      },
+      "2015": {
+        "title": "Building the Foundation",
+        "desc": "Expanded the facility and added CNC turning centres, establishing the core machining capabilities that define the company today."
+      },
+      "2017": {
+        "title": "Scaling Production",
+        "desc": "Installed high-speed traub machines and grew monthly output to serve automotive and electrical industry clients across India."
+      },
+      "2019": {
+        "title": "Quality Systems",
+        "desc": "Implemented formal quality management processes, in-house inspection lab, and material traceability systems across all production lines."
+      },
+      "2021": {
+        "title": "Going Global",
+        "desc": "Shipped the first international consignments to the UAE and Germany, entering global OEM supply chains for the first time."
+      },
+      "2024": {
+        "title": "ISO 9001:2015 Certified",
+        "desc": "Achieved ISO certification, crossed 120 active clients including automotive OEM suppliers and electrical majors across 18+ countries."
+      },
+      "2026": {
+        "title": "The Road Ahead",
+        "desc": "Commissioning a new automated facility with robotic loading, inline vision inspection, and doubled export capacity."
+      }
+    },
+    "vision": {
+      "title": "Notre vision",
+      "desc": "Faire de \"Made in Jamnagar\" le premier choix de chaque fabricant mondial s'approvisionnant en composants de laiton — en prouvant que l'ingénierie de précision indienne peut surpasser toute alternative en qualité, fiabilité et valeur."
+    },
+    "mission": {
+      "title": "Notre mission",
+      "desc": "Livrer des composants en laiton sans défaut dans les délais, à chaque fois — par un investissement continu dans les machines et la métrologie, un contrôle rigoureux des processus, des partenariats honnêtes avec nos clients, et le développement incessant de nos collaborateurs."
+    },
+    "values": {
+      "quality": { "title": "Qualité sans compromis", "desc": "Chaque lot passe l'inspection dimensionnelle, des filets et de finition avant de quitter notre installation." },
+      "partnership": { "title": "Esprit de partenariat", "desc": "Nous agissons comme une extension de votre chaîne d'approvisionnement — tarification transparente, délais honnêtes, communication proactive." },
+      "investment": { "title": "Investissement continu", "desc": "Les bénéfices sont réinvestis dans les machines, la métrologie et les personnes, afin que notre capacité grandisse avec vos exigences." }
+    },
+    "certificates": {
+      "eyebrow": "Certifications & Conformité",
+      "heading": "Une qualité que vous pouvez auditer, pas seulement faire confiance",
+      "cta": "Lire notre politique qualité",
+      "iso": "Système de management de la qualité certifié couvrant la conception, la fabrication et la fourniture de composants en laiton.",
+      "rohs": "Tous les composants sont conformes à la directive sur la restriction des substances dangereuses pour les marchés mondiaux.",
+      "ce": "Les gammes de produits applicables répondent aux normes européennes de santé, de sécurité et de protection de l'environnement.",
+      "msme": "Entreprise manufacturière enregistrée auprès du gouvernement indien, Jamnagar, Gujarat.",
+      "docLabel": "Documentation sur demande:",
+      "docDesc": "certificats d'essai des matériaux, rapports d'inspection dimensionnelle, rapports d'épaisseur de placage et documentation PPAP sont disponibles avec chaque expédition sur demande."
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Langue"
+  }
+}

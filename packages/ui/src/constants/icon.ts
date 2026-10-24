@@ -1,4 +1,4 @@
-import { AlertCircle, ArrowDown, ArrowLeft, ArrowRight, Building2, Car, ChartPie, Check, CheckCircle2, ChevronDown, CirclePile, CirclePlus, Database, Dna, Download, Edit3, Ellipsis, ExternalLink, Eye, EyeOff, Factory, FileCheck2, FileText, Flame, FlaskConical, Globe, GripVertical, Group, HandCoins, Layers2, LayoutDashboard, LayoutList, LinkIcon, Loader2, Lock, LogOut, Mail, MapPin, Medal, Menu, MessageCircleQuestionMark, MessageSquareDot, Package, PanelLeft, Phone, PlaneTakeoff, Puzzle, Route, Settings, ShieldCheck, Star, StickyNotePlus, StickyNotes, TrainFront, Trash2, UploadCloud, User, X } from "lucide-react";
+import { AlertCircle, ArrowDown, ArrowLeft, ArrowRight, Building2, Car, ChartPie, Check, CheckCircle2, ChevronDown, CirclePile, CirclePlus, Clock, Crosshair, Database, Dna, Download, Edit3, Ellipsis, ExternalLink, Eye, EyeOff, Factory, FileCheck2, FileText, Flame, FlaskConical, Globe, GripVertical, Group, HandCoins, Layers2, LayoutDashboard, LayoutList, LinkIcon, Loader2, Lock, LogOut, Mail, MapPin, Medal, Menu, MessageCircleQuestionMark, MessageSquareDot, Package, PanelLeft, Phone, PlaneTakeoff, Puzzle, Route, Settings, ShieldCheck, Star, StickyNotePlus, StickyNotes, TrainFront, Trash2, UploadCloud, User, X } from "lucide-react";
 
 export const icons = {
     dashboard: LayoutDashboard,
@@ -89,8 +89,9 @@ export const icons = {
     flame: Flame,
 
     route: Route,
-    layers2: Layers2
-
+    layers2: Layers2,
+    crosshair: Crosshair,
+    clock: Clock
 }
 
 export { type Icon } from "lucide-react";

@@ -6,6 +6,7 @@ import Section from "@/components/layout/Section";
 import BackgroundNoise from "@/components/shared/BackgroundNoise";
 import { EyeBrowSimple } from "@/components/shared/SectionHeader";
 import { icons } from "@super/ui";
+import { useTranslations } from "next-intl";
 import { ComponentType } from "react";
 
 type WHYType = {
@@ -15,46 +16,48 @@ type WHYType = {
     index: string;
 }
 
-const WHY: WHYType[] = [
-    {
-        title: 'OEM Factory-Direct',
-        desc: 'No traders, no middlemen. Prices, answers and accountability come straight from the production floor in Jamnagar.',
-        icon: icons.factory,
-        index: '01'
-    },
-    {
-        title: 'Precision You Can Measure',
-        desc: 'CNC and traub machining held to ±0.005 mm, verified with calibrated instruments and documented inspection reports.',
-        icon: icons.crosshair,
-        index: '02'
-    },
-    {
-        title: '24-Hour Quotations',
-        desc: 'Engineering-reviewed quotes with pricing, lead time and material options delivered within one business day.',
-        icon: icons.clock,
-        index: '03'
-    },
-    {
-        title: 'ISO 9001:2015 Systems',
-        desc: 'A certified QMS with full material traceability, PPAP documentation and batch-wise test certificates on demand.',
-        icon: icons.shieldCheck,
-        index: '04'
-    },
-    {
-        title: 'Export-Ready Logistics',
-        desc: 'VCI-protected packaging, third-party inspection and FOB / CIF / DDP shipping to 18+ countries.',
-        icon: icons.plane,
-        index: '05'
-    },
-    {
-        title: 'Total Confidentiality',
-        desc: 'NDA-protected handling of your proprietary drawings, samples and custom-developed components.',
-        icon: icons.lock,
-        index: '06'
-    },
-];
-
 const HomeWhyUs = () => {
+    const t = useTranslations('HomeWhyUs');
+
+    const WHY: WHYType[] = [
+        {
+            title: t('reasons.oemTitle'),
+            desc: t('reasons.oemDesc'),
+            icon: icons.factory,
+            index: '01'
+        },
+        {
+            title: t('reasons.precisionTitle'),
+            desc: t('reasons.precisionDesc'),
+            icon: icons.crosshair,
+            index: '02'
+        },
+        {
+            title: t('reasons.quotationTitle'),
+            desc: t('reasons.quotationDesc'),
+            icon: icons.clock,
+            index: '03'
+        },
+        {
+            title: t('reasons.isoTitle'),
+            desc: t('reasons.isoDesc'),
+            icon: icons.shieldCheck,
+            index: '04'
+        },
+        {
+            title: t('reasons.logisticsTitle'),
+            desc: t('reasons.logisticsDesc'),
+            icon: icons.plane,
+            index: '05'
+        },
+        {
+            title: t('reasons.ndaTitle'),
+            desc: t('reasons.ndaDesc'),
+            icon: icons.lock,
+            index: '06'
+        },
+    ];
+
     const HeroIcon = WHY[0]!.icon;
     const FooterIcon = WHY[5]!.icon;
 
@@ -65,12 +68,12 @@ const HomeWhyUs = () => {
             <Container className="relative z-10">
                 <div className="mb-16">
                     <Fade>
-                        <EyeBrowSimple>why choose us</EyeBrowSimple>
+                        <EyeBrowSimple>{t('eyebrow')}</EyeBrowSimple>
                         <h2 className="text-3xl md:text-5xl font-semibold tracking-tight max-w-2xl mb-4 text-[#1a2845] mt-4">
-                            The Super Brass Advantage
+                            {t('heading')}
                         </h2>
                         <p className="text-muted-foreground text-lg max-w-2xl">
-                            Delivering precision at scale with zero compromises. Here is why industry leaders trust us with their most critical components.
+                            {t('subtitle')}
                         </p>
                     </Fade>
                 </div>

@@ -9,36 +9,36 @@ import { EyeBrow } from "@/components/shared/SectionHeader"
 import { icons } from "@super/ui"
 import { Easing } from "motion"
 import { motion } from "motion/react"
+import { useTranslations } from "next-intl"
 
 const EASE: Easing = [0.25, 0.1, 0.25, 0.95]
 
-const FEATURES = [
-    {
-        icon: icons.route,
-        title: "Drawing-to-Delivery",
-        description:
-            "Send a 2D drawing, 3D model or sample — we handle tooling, production, finishing and export packing.",
-    },
-    {
-        icon: icons.layers2,
-        title: "In-house Everything",
-        description:
-            "CNC turning, traub machining, threading, knurling and inspection under one roof.",
-    },
-    {
-        icon: icons.lock,
-        title: "NDA-Protected Development",
-        description:
-            "Your designs stay confidential. We routinely work under NDAs with global OEMs.",
-    },
-]
-
-const STATS = [
-    { value: "±0.005", label: "MM Tolerance Capability" },
-    { value: "24 hrs", label: "Quotation Turnaround" },
-]
-
 const HomeOEM = () => {
+    const t = useTranslations('HomeOEM');
+
+    const FEATURES = [
+        {
+            icon: icons.route,
+            title: t('features.drawingTitle'),
+            description: t('features.drawingDesc'),
+        },
+        {
+            icon: icons.layers2,
+            title: t('features.inhouseTitle'),
+            description: t('features.inhouseDesc'),
+        },
+        {
+            icon: icons.lock,
+            title: t('features.ndaTitle'),
+            description: t('features.ndaDesc'),
+        },
+    ]
+
+    const STATS = [
+        { value: "±0.005", label: t('stats.tolerance') },
+        { value: "24 hrs", label: t('stats.quotation') },
+    ]
+
     return (
         <Section className="relative bg-primary overflow-hidden">
             <BackgroundNoise className="opacity-[0.03]" />
@@ -47,7 +47,7 @@ const HomeOEM = () => {
                 {/* ── Top: EyeBrow + Heading + Paragraph ── */}
                 <div className="max-w-3xl mb-16 lg:mb-20">
                     <Fade>
-                        <EyeBrow>Direct From The Source</EyeBrow>
+                        <EyeBrow>{t('eyebrow')}</EyeBrow>
                     </Fade>
 
                     <h2 className="text-5xl sm:text-6xl lg:text-7xl flex flex-col font-bold tracking-tight text-white leading-[1.05]">
@@ -59,7 +59,7 @@ const HomeOEM = () => {
                             viewport={{ once: true, amount: 0.5 }}
                             transition={{ duration: 0.9, delay: 0.1, ease: EASE }}
                         >
-                            We are
+                            {t('titleLine1')}
                         </motion.span>
                         <motion.span
                             className="block"
@@ -68,13 +68,13 @@ const HomeOEM = () => {
                             viewport={{ once: true, amount: 0.5 }}
                             transition={{ duration: 0.9, delay: 0.22, ease: EASE }}
                         >
-                            OEM Manufacturers.
+                            {t('titleLine2')}
                         </motion.span>
                     </h2>
 
                     <Fade delay={0.5}>
                         <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
-                            When you work with Super Brass Industries, you work directly with the factory floor. No middlemen, no markups — just precision engineering, complete transparency, and total confidentiality for your proprietary parts.
+                            {t('subtitle')}
                         </p>
                     </Fade>
                 </div>
@@ -124,7 +124,7 @@ const HomeOEM = () => {
                     {/* CTA */}
                     <Fade delay={0.3}>
                         <CustomLink variant="button-white" href="/quote">
-                            Get a Free Quote
+                            {t('cta')}
                             <Arrow variant="primary" />
                         </CustomLink>
                     </Fade>

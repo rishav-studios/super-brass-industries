@@ -1,0 +1,262 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "categories": "Categorie",
+    "contact": "Contatti",
+    "requestQuote": "Richiedi preventivo"
+  },
+  "Footer": {
+    "tagline": "Consegnare componenti lavorati di precisione alle industrie più esigenti del mondo dal 2012. Costruiti sulla qualità, scalati con l'ingegneria.",
+    "company": "Azienda",
+    "categories": "Categorie",
+    "contactUs": "Contattaci",
+    "businessHours": "Orari di lavoro",
+    "businessHoursValue": "Sabato–Giovedì\ndalle 8:00 alle 20:00 IST",
+    "viewAllCategories": "Vedi tutte le categorie",
+    "globalAvailability": "Disponibilità globale e orari di ufficio",
+    "indiaTime": "India (IST)",
+    "europeTime": "Europa (EU)",
+    "usaEastTime": "USA Est (EST)",
+    "usaWestTime": "USA Ovest (PST)",
+    "copyright": "Super Brass Industries. Tutti i diritti riservati.",
+    "links": {
+      "about": "Chi siamo",
+      "categories": "Categorie",
+      "contact": "Contatti",
+      "privacy": "Informativa sulla privacy",
+      "terms": "Termini di servizio",
+      "quality": "Politica qualità"
+    }
+  },
+  "Hero": {
+    "eyebrow": "Certificato ISO 9001:2015 • Jamnagar, India",
+    "titleLine1": "Componenti in ottone",
+    "titleLine2": "di precisione,",
+    "titleLine3": "Progettati",
+    "titleLine4": "per OEM globali",
+    "subtitle": "Da parti auto a spine elettriche — Super Brass Industries produce oltre 10 milioni di componenti in ottone di precisione all'anno per produttori in 18+ paesi. Il tuo disegno, la nostra maestria.",
+    "ctaQuote": "Richiedi preventivo",
+    "ctaExplore": "Esplora le categorie",
+    "badge1": "Risposta preventivo in 24h",
+    "badge2": "±0,005 mm di tolleranza",
+    "badge3": "100% lotti ispezionati",
+    "stat1Label": "Componenti / Anno",
+    "stat2Label": "Paesi esportatori",
+    "stat3Label": "mm di tolleranza",
+    "stat4Label": "Tempi di preventivo"
+  },
+  "HomeAbout": {
+    "eyebrow": "chi siamo",
+    "heading": "Dalla città dell'ottone in India alle linee di produzione mondiali",
+    "p1": "Super Brass Industries è stata fondata nel 2012 a Jamnagar — la città che produce oltre il 70% dei componenti in ottone dell'India. In poco più di un decennio siamo diventati un partner OEM di fiducia per produttori dei settori automotive, elettrico e gas in 18+ paesi.",
+    "p2": "Con tornitura CNC, lavorazione traub, filettatura, coordinamento galvanico e un laboratorio di ispezione completamente attrezzato, controlliamo ogni fase della produzione — per consegnarti componenti che si adattano perfettamente, sin dalla prima volta.",
+    "cta": "Scopri di più su di noi",
+    "credentials": {
+      "iso": "QMS certificato ISO 9001:2015",
+      "exports": "Esportazioni in 18+ paesi",
+      "cnc": "Impianto CNC e Traub interno",
+      "inspection": "Ispezione al 100% per lotto"
+    },
+    "badge": {
+      "year": "Fondata nel 2012",
+      "location": "Jamnagar, Gujarat"
+    }
+  },
+  "HomeOEM": {
+    "eyebrow": "Direttamente dalla fonte",
+    "titleLine1": "Siamo",
+    "titleLine2": "produttori OEM.",
+    "subtitle": "Quando lavori con Super Brass Industries, lavori direttamente con il pavimento della fabbrica. Nessun intermediario, nessun ricarico — solo ingegneria di precisione, massima trasparenza e totale riservatezza per i tuoi componenti proprietari.",
+    "features": {
+      "drawingTitle": "Dal disegno alla consegna",
+      "drawingDesc": "Invia un disegno 2D, modello 3D o campione — ci occupiamo di attrezzature, produzione, finitura e imballaggio per l'esportazione.",
+      "inhouseTitle": "Tutto in casa",
+      "inhouseDesc": "Tornitura CNC, lavorazione traub, filettatura, zigrinatura e ispezione sotto lo stesso tetto.",
+      "ndaTitle": "Sviluppo protetto da NDA",
+      "ndaDesc": "I tuoi progetti rimangono riservati. Lavoriamo regolarmente sotto NDA con OEM globali."
+    },
+    "stats": {
+      "tolerance": "Capacità di tolleranza MM",
+      "quotation": "Tempi di preventivo"
+    },
+    "cta": "Ottieni un preventivo gratuito"
+  },
+  "HomeCategories": {
+    "eyebrow": "La nostra gamma di prodotti",
+    "heading": "Molte categorie. Un unico standard di qualità.",
+    "viewDetails": "Vedi dettagli"
+  },
+  "HomeIndustries": {
+    "eyebrow": "Settori",
+    "heading": "Settori che serviamo",
+    "industries": {
+      "automotive": { "name": "Automotive", "desc": "Sistemi carburante, freni, sensori e componenti motore per OEM e Tier-1." },
+      "electrical": { "name": "Elettrico ed Elettronico", "desc": "Pin, terminali, contatti e connettori per quadri elettrici e apparecchi." },
+      "gas": { "name": "Gas ed Energia", "desc": "Valvole, ugelli e parti di regolatori critici per sicurezza in GPL e GNC." },
+      "plumbing": { "name": "Idraulica e Sanitario", "desc": "Raccordi a tenuta, inserti e componenti valvola per impianti idrici." },
+      "marine": { "name": "Marino", "desc": "Corpi connettori di precisione e componenti hardware RF." },
+      "construction": { "name": "Edilizia", "desc": "Ferramenta architettonica, ancoraggi e soluzioni di fissaggio." },
+      "agriculture": { "name": "Agricoltura", "desc": "Ugelli per irrorazione, raccordi per irrigazione e componenti pompe." },
+      "railways": { "name": "Ferroviario", "desc": "Componenti ad alta affidabilità fabbricati secondo specifiche rigorose." },
+      "defence": { "name": "Difesa", "desc": "Componenti ad alta affidabilità fabbricati secondo specifiche rigorose." },
+      "aerospace": { "name": "Aerospaziale", "desc": "Componenti ad alta affidabilità fabbricati secondo specifiche rigorose." }
+    }
+  },
+  "HomeStatistics": {
+    "eyebrow": "La nostra storia in numeri",
+    "headingStart": "Quattro numeri. Una sola",
+    "headingItalic": "storia",
+    "headingEnd": "di precisione.",
+    "subtitle": "Da una sola macchina a Jamnagar alle spedizioni in quattro continenti — ecco come Super Brass Industries è cresciuta, raccontata nel solo modo di cui si fidano gli ingegneri.",
+    "chapterLabel": "Capitolo",
+    "stats": {
+      "years": "Anni di eccellenza",
+      "clients": "Clienti globali",
+      "components": "Componenti / Anno",
+      "countries": "Paesi serviti"
+    },
+    "story": {
+      "ch1Title": "È iniziato sul pavimento dell'officina",
+      "ch1Desc": "Dal 2012, una singola linea CNC a Jamnagar si è trasformata in un'unità di lavorazione di precisione completa — ogni anno con tolleranze più strette e pezzi più impegnativi.",
+      "ch2Title": "Poi il mondo ha iniziato a chiamare",
+      "ch2Desc": "I produttori e gli importatori arrivati con un disegno sono rimasti per tutta la loro gamma di componenti. La maggior parte del nostro lavoro oggi viene da ordini ripetuti.",
+      "ch3Title": "Il volume ha incontrato la precisione",
+      "ch3Desc": "Milioni di pezzi all'anno, ciascuno mantenuto a ±0,005 mm e ispezionato lotto per lotto — perché a questa scala, la coerenza è il prodotto.",
+      "ch4Title": "E la mappa ha continuato a crescere",
+      "ch4Desc": "I nostri componenti ora lasciano Jamnagar in imballaggi per l'esportazione diretti verso Nord America, Europa, Medio Oriente e Oceania."
+    },
+    "ctaLabel": "Il prossimo capitolo di solito viene scritto con un disegno e una scadenza.",
+    "cta": "Inizia con un preventivo"
+  },
+  "Exports": {
+    "eyebrow": "Esportazioni",
+    "heading": "Siamo in tutto il mondo.",
+    "countriesHeading": "Paesi verso cui esportiamo"
+  },
+  "HomeWhyUs": {
+    "eyebrow": "perché sceglierci",
+    "heading": "Il vantaggio Super Brass",
+    "subtitle": "Consegnare precisione su scala senza compromessi. Ecco perché i leader del settore ci affidano i loro componenti più critici.",
+    "reasons": {
+      "oemTitle": "Produttore OEM diretto",
+      "oemDesc": "Nessun commerciante, nessun intermediario. Prezzi, risposte e responsabilità vengono direttamente dal pavimento di produzione a Jamnagar.",
+      "precisionTitle": "Precisione misurabile",
+      "precisionDesc": "Lavorazione CNC e traub mantenuta a ±0,005 mm, verificata con strumenti calibrati e rapporti di ispezione documentati.",
+      "quotationTitle": "Preventivi in 24 ore",
+      "quotationDesc": "Preventivi revisionati dagli ingegneri con prezzi, tempi di consegna e opzioni materiali consegnati entro un giorno lavorativo.",
+      "isoTitle": "Sistemi ISO 9001:2015",
+      "isoDesc": "Un QMS certificato con piena tracciabilità dei materiali, documentazione PPAP e certificati di prova per lotto su richiesta.",
+      "logisticsTitle": "Logistica pronta per l'export",
+      "logisticsDesc": "Imballaggio protetto VCI, ispezione terze parti e spedizione FOB/CIF/DDP verso 18+ paesi.",
+      "ndaTitle": "Totale riservatezza",
+      "ndaDesc": "Gestione protetta da NDA dei tuoi disegni proprietari, campioni e componenti sviluppati su misura."
+    }
+  },
+  "HomeFAQ": {
+    "eyebrow": "FAQ",
+    "heading": "Risposte prima che tu faccia domande",
+    "subtitle": "Tutto ciò che i team acquisti di solito vogliono sapere. Hai ancora domande? Il nostro team risponde entro un giorno lavorativo.",
+    "cta": "Fai una domanda",
+    "faqs": {
+      "q1": "Qual è la vostra quantità minima d'ordine (MOQ)?",
+      "a1": "La nostra MOQ è flessibile e dipende dalla complessità e dalle dimensioni del componente. Per i componenti standard in genere partiamo da 1.000 pezzi, mentre per le parti sviluppate su misura possiamo supportare quantità di prototipo e pilota prima di scalare alla produzione completa.",
+      "q2": "Potete produrre parti dai nostri disegni o campioni?",
+      "a2": "Sì — questa è la nostra forza principale come produttori OEM. Condividete i vostri disegni 2D, modelli 3D (STEP/IGES) o un campione fisico, e il nostro team di ingegneri lo esaminerà, suggerirà ottimizzazioni se necessario, e consegnerà un preventivo dettagliato entro 24–48 ore. Tutto lo sviluppo è protetto da NDA.",
+      "q3": "Quali certificazioni di qualità possedete?",
+      "a3": "Super Brass Industries opera un sistema di gestione della qualità certificato ISO 9001:2015. I nostri componenti sono conformi RoHS e forniamo su richiesta certificati di prova dei materiali, rapporti di ispezione dimensionale e documentazione PPAP.",
+      "q4": "Quali sono i vostri tempi di consegna tipici?",
+      "a4": "I componenti standard vengono spediti 2–3 settimane dopo la conferma dell'ordine. Le parti personalizzate richiedono 3–5 settimane inclusi l'attrezzatura e l'approvazione dei campioni. Per gli ordini ripetuti manteniamo programmi di scorte di sicurezza che possono ridurre i tempi di consegna a meno di una settimana.",
+      "q5": "Con quali gradi di ottone e finiture lavorate?",
+      "a5": "Lavoriamo CW614N, CW617N, C36000, C38500, DZR e gradi di ottone senza piombo. Le finiture superficiali includono naturale, nichel, stagno, zinco, cromo e argentatura — tutte con rapporti di spessore della placcatura verificati.",
+      "q6": "Esportate? Come vengono imballate le spedizioni?",
+      "a6": "Sì, attualmente esportiamo in 18+ paesi in Nord America, Europa, Medio Oriente e Oceania. I componenti sono imballati in imballaggi per l'esportazione rivestiti VCI con etichettatura di tracciabilità completa, spediti via mare o aria secondo i vostri Incoterms (FOB, CIF, DDP)."
+    }
+  },
+  "HomeCTA": {
+    "eyebrow": "Avvia il tuo progetto",
+    "headingStart": "Hai un disegno? Ottieni un preventivo dettagliato in",
+    "headingHighlight": "24 ore.",
+    "subtitle": "Inviaci le tue specifiche e il nostro team di ingegneri risponderà con prezzi, tempi di consegna e raccomandazioni sui materiali — senza impegno, completamente riservato.",
+    "ctaQuote": "Richiedi preventivo",
+    "ctaTalk": "Parla con il nostro team"
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "Chi è Super Brass Industries",
+      "titleStart": "Prodotto a Jamnagar. Scelto da produttori ",
+      "titleHighlight": "di tutto il mondo.",
+      "subtitle": "Dal 2021, produciamo componenti in ottone di precisione per aziende che non possono permettersi nemmeno un pezzo difettoso. Questa è la nostra storia."
+    },
+    "intro": {
+      "eyebrow": "Le nostre origini",
+      "heading": "Una giovane azienda con un'ossessione d'altri tempi: fare le cose per bene",
+      "p1": "Super Brass Industries è stata fondata nel 2021 a Jamnagar, Gujarat — l'indiscussa capitale dell'ottone in India. I nostri fondatori sono cresciuti intorno a torni e centri di tornitura, e hanno avviato l'azienda con una semplice convinzione: gli acquirenti globali meritano un fornitore che tratti il loro disegno come un contratto.",
+      "p2": "Oggi gestiamo un impianto moderno con centri di tornitura CNC, macchine traub ad alta velocità, laminazione di filetti, zigrinatura e un laboratorio qualità dedicato. Come produttori OEM, serviamo direttamente i clienti dei settori automotive, elettrico, gas e idraulica — senza strati commerciali intermedi.",
+      "stats": {
+        "established": "Fondata",
+        "team": "Membri del team",
+        "categories": "Categorie di prodotto"
+      }
+    },
+    "journey": {
+      "eyebrow": "Company Journey",
+      "heading": "2012 → 2026: From a workshop to a global facility",
+      "2012": {
+        "title": "The Beginning",
+        "desc": "Super Brass Industries is founded in Jamnagar — the brass capital of India — with a small workshop and a commitment to precision engineering."
+      },
+      "2015": {
+        "title": "Building the Foundation",
+        "desc": "Expanded the facility and added CNC turning centres, establishing the core machining capabilities that define the company today."
+      },
+      "2017": {
+        "title": "Scaling Production",
+        "desc": "Installed high-speed traub machines and grew monthly output to serve automotive and electrical industry clients across India."
+      },
+      "2019": {
+        "title": "Quality Systems",
+        "desc": "Implemented formal quality management processes, in-house inspection lab, and material traceability systems across all production lines."
+      },
+      "2021": {
+        "title": "Going Global",
+        "desc": "Shipped the first international consignments to the UAE and Germany, entering global OEM supply chains for the first time."
+      },
+      "2024": {
+        "title": "ISO 9001:2015 Certified",
+        "desc": "Achieved ISO certification, crossed 120 active clients including automotive OEM suppliers and electrical majors across 18+ countries."
+      },
+      "2026": {
+        "title": "The Road Ahead",
+        "desc": "Commissioning a new automated facility with robotic loading, inline vision inspection, and doubled export capacity."
+      }
+    },
+    "vision": {
+      "title": "La nostra visione",
+      "desc": "Fare di \"Made in Jamnagar\" la prima scelta di ogni produttore globale che acquista componenti in ottone — dimostrando che l'ingegneria di precisione indiana può superare qualsiasi alternativa in qualità, affidabilità e valore."
+    },
+    "mission": {
+      "title": "La nostra missione",
+      "desc": "Consegnare componenti in ottone privi di difetti in tempo, ogni volta — attraverso l'investimento continuo in macchinari e metrologia, il rigoroso controllo dei processi, le partnership oneste con i nostri clienti e lo sviluppo incessante del nostro personale."
+    },
+    "values": {
+      "quality": { "title": "Qualità senza compromessi", "desc": "Ogni lotto supera l'ispezione dimensionale, dei filetti e della finitura prima di lasciare il nostro impianto." },
+      "partnership": { "title": "Mentalità di partnership", "desc": "Agiamo come un'estensione della tua catena di fornitura — prezzi trasparenti, tempi di consegna onesti, comunicazione proattiva." },
+      "investment": { "title": "Investimento continuo", "desc": "I profitti vengono reinvestiti in macchine, metrologia e persone, in modo che la nostra capacità cresca con i tuoi requisiti." }
+    },
+    "certificates": {
+      "eyebrow": "Certificazioni e conformità",
+      "heading": "Una qualità che puoi verificare, non solo fidarti",
+      "cta": "Leggi la nostra politica qualità",
+      "iso": "Sistema di gestione della qualità certificato che copre progettazione, produzione e fornitura di componenti in ottone.",
+      "rohs": "Tutti i componenti sono conformi alla direttiva sulla restrizione delle sostanze pericolose per i mercati globali.",
+      "ce": "Le gamme di prodotti applicabili soddisfano gli standard europei di salute, sicurezza e protezione ambientale.",
+      "msme": "Impresa manifatturiera registrata presso il Governo Indiano, Jamnagar, Gujarat.",
+      "docLabel": "Documentazione su richiesta:",
+      "docDesc": "certificati di prova dei materiali, rapporti di ispezione dimensionale, rapporti di spessore della placcatura e documentazione PPAP sono disponibili con ogni spedizione su richiesta."
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Lingua"
+  }
+}

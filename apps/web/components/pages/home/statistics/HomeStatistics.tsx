@@ -7,33 +7,10 @@ import { CustomLink } from "@/components/shared/clickables/CustomLink";
 import { EyeBrowSimple } from "@/components/shared/SectionHeader";
 import { icons } from "@super/ui";
 import { animate, Easing, motion, useInView } from "motion/react";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-const STAT_STORY = [
-    {
-        chapter: 'It started on the shop floor',
-        desc: 'Since 2012, a single CNC line in Jamnagar has grown into a full precision-machining unit — every year adding tighter tolerances and tougher parts.',
-    },
-    {
-        chapter: 'Then the world started calling',
-        desc: 'Manufacturers and importers who arrived with one drawing stayed for their entire component range. Most of our work today comes from repeat orders.',
-    },
-    {
-        chapter: 'Volume met precision',
-        desc: 'Millions of parts a year, each one held to ±0.005 mm and inspected batch by batch — because at this scale, consistency is the product.',
-    },
-    {
-        chapter: 'And the map kept growing',
-        desc: 'Our components now leave Jamnagar in export-grade packaging bound for North America, Europe, the Middle East and Oceania.',
-    },
-] as const;
 
-export const STATS = [
-    { value: 12, suffix: '+', label: 'Years of Excellence' },
-    { value: 120, suffix: '+', label: 'Global Clients' },
-    { value: 10, suffix: 'M+', label: 'Components / Year' },
-    { value: 18, suffix: '+', label: 'Countries Served' },
-] as const;
-
+const EASE: Easing = [0.22, 1, 0.36, 1]
 
 type CounterProps = {
     value: number;
@@ -63,9 +40,24 @@ export const Counter = ({ value, suffix = '', className = '' }: CounterProps) =>
         </span>
     );
 };
-const EASE: Easing = [0.22, 1, 0.36, 1]
 
 const HomeStatistics = () => {
+    const t = useTranslations('HomeStatistics');
+
+    const STAT_STORY = [
+        { chapter: t('story.ch1Title'), desc: t('story.ch1Desc') },
+        { chapter: t('story.ch2Title'), desc: t('story.ch2Desc') },
+        { chapter: t('story.ch3Title'), desc: t('story.ch3Desc') },
+        { chapter: t('story.ch4Title'), desc: t('story.ch4Desc') },
+    ] as const;
+
+    const STATS = [
+        { value: 12, suffix: '+', label: t('stats.years') },
+        { value: 120, suffix: '+', label: t('stats.clients') },
+        { value: 10, suffix: 'M+', label: t('stats.components') },
+        { value: 18, suffix: '+', label: t('stats.countries') },
+    ] as const;
+
     return (
         <Section className="relative bg-primary overflow-hidden" data-testid="stats-section">
 
@@ -79,17 +71,17 @@ const HomeStatistics = () => {
 
             <Container className="relative">
                 <Fade className="mb-16 max-w-3xl">
-                    <EyeBrowSimple className="text-white mb-2" light>Our Story In Numbers</EyeBrowSimple>
+                    <EyeBrowSimple className="text-white mb-2" light>{t('eyebrow')}</EyeBrowSimple>
                     <h2 className="font-heading text-3xl lg:text-5xl font-bold tracking-tight text-white leading-[1.08]">
-                        Four numbers. One{' '}
+                        {t('headingStart')}{' '}
                         <span className="relative inline-block italic text-amber-300">
-                            story
+                            {t('headingItalic')}
                             <span className="absolute -bottom-1 left-0 h-0.75 w-full bg-amber-300/70" />
                         </span>{' '}
-                        of precision.
+                        {t('headingEnd')}
                     </h2>
                     <p className="mt-5 text-base text-slate-300 leading-relaxed max-w-xl">
-                        From a single machine in Jamnagar to shipments across four continents — here is how Super Brass Industries grew, told the only way engineers trust.
+                        {t('subtitle')}
                     </p>
                 </Fade>
 
@@ -121,12 +113,12 @@ const HomeStatistics = () => {
                                             <span className="h-1.75 w-1.75 rounded-full bg-amber-300" />
                                         </motion.span>
                                         <span className="lg:hidden text-[11px] font-bold uppercase tracking-[0.3em] text-white/40">
-                                            Chapter {String(i + 1).padStart(2, '0')}
+                                            {t('chapterLabel')} {String(i + 1).padStart(2, '0')}
                                         </span>
                                     </div>
 
                                     <span className="hidden lg:block mt-6 text-[11px] font-bold uppercase tracking-[0.3em] text-white/40">
-                                        Chapter {String(i + 1).padStart(2, '0')}
+                                        {t('chapterLabel')} {String(i + 1).padStart(2, '0')}
                                     </span>
 
                                     <p className="mt-4 lg:mt-3 font-heading text-5xl lg:text-[4.25rem] font-bold tracking-tight leading-none bg-linear-to-b from-white to-slate-400 bg-clip-text text-transparent">
@@ -153,7 +145,7 @@ const HomeStatistics = () => {
 
                 <Fade delay={0.2} className="mt-16 flex flex-col sm:flex-row sm:items-center gap-4 border-t border-white/10 pt-8">
                     <p className="text-sm text-slate-400">
-                        The next chapter is usually written with a drawing and a deadline.
+                        {t('ctaLabel')}
                     </p>
                     <CustomLink
                         href="/quote"
@@ -161,7 +153,7 @@ const HomeStatistics = () => {
                         className="text-amber-300 group hover:text-white transition-colors"
                         data-testid="stats-cta"
                     >
-                        Start yours with a quote
+                        {t('cta')}
                         <icons.arrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 -rotate-45" />
                     </CustomLink>
                 </Fade>

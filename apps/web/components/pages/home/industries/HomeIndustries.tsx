@@ -3,37 +3,45 @@
 import Container from "@/components/layout/Container";
 import { EyeBrowSimple } from "@/components/shared/SectionHeader";
 import { AnimatePresence, Easing, motion, useMotionValueEvent, useScroll } from "motion/react";
+import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
-
-export const INDUSTRIES = [
-    { name: 'Automotive', icon: 'Car', desc: 'Fuel systems, braking, sensors and engine components for OEMs and Tier-1s.', video: 'https://assets.mixkit.co/videos/35540/35540-720.mp4' },
-    { name: 'Electrical & Electronics', icon: 'Zap', desc: 'Pins, terminals, contacts and connectors for switchgear and appliances.', video: 'https://assets.mixkit.co/videos/46965/46965-720.mp4' },
-    { name: 'Gas & Energy', icon: 'Flame', desc: 'Safety-critical valves, nozzles and regulator parts for LPG and CNG.', video: 'https://assets.mixkit.co/videos/4380/4380-720.mp4' },
-    { name: 'Plumbing & Sanitary', icon: 'Droplets', desc: 'Leak-proof fittings, inserts and valve components for water systems.', video: 'https://assets.mixkit.co/videos/47071/47071-720.mp4' },
-    { name: 'Marine', icon: 'Radio', desc: 'Precision connector bodies and RF hardware components.', video: 'https://assets.mixkit.co/videos/11937/11937-720.mp4' },
-    { name: 'Construction', icon: 'Building2', desc: 'Architectural hardware, anchors and fastening solutions.', video: 'https://assets.mixkit.co/videos/40723/40723-720.mp4' },
-    { name: 'Agriculture', icon: 'Tractor', desc: 'Sprayer nozzles, irrigation fittings and pump components.', video: 'https://assets.mixkit.co/videos/10015/10015-720.mp4' },
-    { name: 'Railways', icon: 'Shield', desc: 'High-reliability components manufactured to strict specifications.', video: 'https://assets.mixkit.co/videos/28181/28181-720.mp4' },
-    { name: 'Defence', icon: 'Shield', desc: 'High-reliability components manufactured to strict specifications.', video: 'https://assets.mixkit.co/videos/22181/22181-720.mp4' },
-    { name: 'Aerospace', icon: 'Shield', desc: 'High-reliability components manufactured to strict specifications.', video: 'https://assets.mixkit.co/videos/7034/7034-720.mp4' },
-];
 
 const EASE: Easing = [0.25, 0.1, 0.25, 0.95];
 
+type Industry = {
+    key: string;
+    icon: string;
+    video: string;
+};
+
+const INDUSTRIES_DEFS: Industry[] = [
+    { key: 'automotive', icon: 'Car', video: 'https://assets.mixkit.co/videos/35540/35540-720.mp4' },
+    { key: 'electrical', icon: 'Zap', video: 'https://assets.mixkit.co/videos/46965/46965-720.mp4' },
+    { key: 'gas', icon: 'Flame', video: 'https://assets.mixkit.co/videos/4380/4380-720.mp4' },
+    { key: 'plumbing', icon: 'Droplets', video: 'https://assets.mixkit.co/videos/47071/47071-720.mp4' },
+    { key: 'marine', icon: 'Radio', video: 'https://assets.mixkit.co/videos/11937/11937-720.mp4' },
+    { key: 'construction', icon: 'Building2', video: 'https://assets.mixkit.co/videos/40723/40723-720.mp4' },
+    { key: 'agriculture', icon: 'Tractor', video: 'https://assets.mixkit.co/videos/10015/10015-720.mp4' },
+    { key: 'railways', icon: 'Shield', video: 'https://assets.mixkit.co/videos/28181/28181-720.mp4' },
+    { key: 'defence', icon: 'Shield', video: 'https://assets.mixkit.co/videos/22181/22181-720.mp4' },
+    { key: 'aerospace', icon: 'Shield', video: 'https://assets.mixkit.co/videos/7034/7034-720.mp4' },
+];
+
 const HomeIndustries = () => {
+    const t = useTranslations('HomeIndustries');
     const sectionRef = useRef(null);
     const [active, setActive] = useState(0);
     const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end end'] });
 
     useMotionValueEvent(scrollYProgress, 'change', (v) => {
-        const idx = Math.max(0, Math.min(INDUSTRIES.length - 1, Math.floor(v * INDUSTRIES.length)));
+        const idx = Math.max(0, Math.min(INDUSTRIES_DEFS.length - 1, Math.floor(v * INDUSTRIES_DEFS.length)));
         setActive(idx);
     });
 
-    const ind = INDUSTRIES[active];
+    const ind = INDUSTRIES_DEFS[active]!;
 
     return (
-        <section ref={sectionRef} className="relative" style={{ height: `${INDUSTRIES.length * 65}vh` }} data-testid="industries-section">
+        <section ref={sectionRef} className="relative" style={{ height: `${INDUSTRIES_DEFS.length * 65}vh` }} data-testid="industries-section">
             <div className="sticky top-0 h-screen overflow-hidden bg-[#1a2845]">
                 {/* Background video crossfade */}
                 <AnimatePresence initial={false}>
@@ -46,7 +54,7 @@ const HomeIndustries = () => {
                         transition={{ duration: 0.9, ease: 'easeInOut' }}
                     >
                         <video
-                            src={ind!.video}
+                            src={ind.video}
                             autoPlay
                             muted
                             loop
@@ -66,14 +74,14 @@ const HomeIndustries = () => {
                     <div className="flex items-center justify-between">
                         <div className="">
 
-                            <EyeBrowSimple light>Industries</EyeBrowSimple>
+                            <EyeBrowSimple light>{t('eyebrow')}</EyeBrowSimple>
                             <h2 className="font-heading text-3xl lg:text-4xl font-bold tracking-tight text-white max-w-xl leading-[1.12]">
-                                Industries we serve
+                                {t('heading')}
                             </h2>
 
                         </div>
                         <div className="font-heading text-sm font-bold text-white/70 tracking-[0.2em]">
-                            {String(active + 1).padStart(2, '0')} / {String(INDUSTRIES.length).padStart(2, '0')}
+                            {String(active + 1).padStart(2, '0')} / {String(INDUSTRIES_DEFS.length).padStart(2, '0')}
                         </div>
                     </div>
 
@@ -81,8 +89,8 @@ const HomeIndustries = () => {
                         {/* Index list */}
                         <div className="hidden lg:block lg:col-span-4">
                             <ul className="space-y-2.5">
-                                {INDUSTRIES.map((it, i) => (
-                                    <li key={it.name} className="flex items-center gap-3">
+                                {INDUSTRIES_DEFS.map((it, i) => (
+                                    <li key={it.key} className="flex items-center gap-3">
                                         <span
                                             className={`h-px transition-all duration-500 ${i === active ? 'w-10 bg-white' : 'w-4 bg-white/25'}`}
                                         />
@@ -90,7 +98,7 @@ const HomeIndustries = () => {
                                             className={`font-heading text-sm uppercase tracking-[0.15em] transition-all duration-500 ${i === active ? 'text-white font-bold' : 'text-white/35'
                                                 }`}
                                         >
-                                            {it.name}
+                                            {t(`industries.${it.key}.name`)}
                                         </span>
                                     </li>
                                 ))}
@@ -112,15 +120,15 @@ const HomeIndustries = () => {
                                         {String(active + 1).padStart(2, '0')}
                                     </span>
                                     <h3 className="mt-2 font-heading text-4xl lg:text-6xl font-bold tracking-tight text-white leading-[1.02]">
-                                        {ind!.name}
+                                        {t(`industries.${ind.key}.name`)}
                                     </h3>
-                                    <p className="mt-4 max-w-xl text-slate-300 text-base lg:text-lg leading-relaxed">{ind!.desc}</p>
+                                    <p className="mt-4 max-w-xl text-slate-300 text-base lg:text-lg leading-relaxed">{t(`industries.${ind.key}.desc`)}</p>
                                 </motion.div>
                             </AnimatePresence>
 
                             {/* Progress segments */}
                             <div className="mt-8 flex gap-1.5">
-                                {INDUSTRIES.map((_, i) => (
+                                {INDUSTRIES_DEFS.map((_, i) => (
                                     <div key={i} className="h-0.75 flex-1 bg-white/15 overflow-hidden">
                                         <div
                                             className={`h-full bg-white transition-all duration-500 ${i <= active ? 'w-full' : 'w-0'}`}

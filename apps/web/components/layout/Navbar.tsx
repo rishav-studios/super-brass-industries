@@ -1,5 +1,6 @@
 "use client";
 
+import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { TransitionLink } from "@/components/shared/TransitionLink";
 import { FacilityCategory } from "@super/types";
 import { icons } from "@super/ui";
@@ -10,8 +11,10 @@ import {
     DropdownMenuTrigger,
 } from "@super/ui/components/shadcn/dropdown-menu";
 
+import { LANGUAGES } from "@/constants/site_languages";
 import { cn } from "@super/ui/lib/utils";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import Logo from "../pages/home/hero/Logo";
@@ -21,36 +24,16 @@ import { buttonBaseClasses } from "../shared/clickables/variantClasses";
 type NavLink = {
     name: string,
     href: string,
+    key: string;
     type: "link" | "dropdown"
 }
 
-const NAV_LINKS: NavLink[] = [
-    {
-        name: "Home",
-        href: "/home",
-        type: "link"
-    },
-    {
-        name: "About",
-        href: "/about",
-        type: "link"
-    },
-    {
-        name: "Categories",
-        href: "/categories",
-        type: "dropdown"
-    },
-    {
-        name: "Contact",
-        href: "/contact",
-        type: "link"
-    },
-    // {
-    //     name: "Blog",
-    //     href: "/blog",
-    //     type: "link"
-    // },
-];
+const NAV_LINK_DEFS: Omit<NavLink, 'name'>[] = [
+    { href: "/home", type: "link", key: "home" },
+    { href: "/about", type: "link", key: "about" },
+    { href: "/categories", type: "dropdown", key: "categories" },
+    { href: "/contact", type: "link", key: "contact" },
+] as any;
 
 // Scroll range: transformation starts at 0px and completes at 150px
 const SCROLL_START = 0;
@@ -69,6 +52,7 @@ const MobileNavigation = ({
     setIsOpen: (v: boolean) => void;
     facilityCategories: FacilityCategory[];
 }) => {
+    const t = useTranslations('Navbar');
     return (
         <AnimatePresence>
             {isOpen && (
@@ -110,18 +94,18 @@ const MobileNavigation = ({
                         </div>
 
                         <div className="flex flex-col px-6 py-8 gap-2 flex-1">
-                            {NAV_LINKS.map((link, i) => {
+                            {NAV_LINK_DEFS.map((link, i) => {
                                 if (link.type === "dropdown") {
                                     return (
                                         <motion.div
-                                            key={link.name}
+                                            key={link.key}
                                             initial={{ opacity: 0, x: 20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: 0.1 + i * 0.05 }}
                                         >
                                             <DropdownMenu>
                                                 <DropdownMenuTrigger className="flex items-center justify-between w-full text-2xl font-bold py-4 text-white outline-none group border-b border-white/5">
-                                                    {link.name}
+                                                    {t(link.key as any)}
                                                     <icons.chevronDown className="w-6 h-6 transition-transform group-data-[state=open]:rotate-180" />
                                                 </DropdownMenuTrigger>
                                                 <DropdownMenuContent
@@ -146,7 +130,7 @@ const MobileNavigation = ({
 
                                 return (
                                     <motion.div
-                                        key={link.name}
+                                        key={link.key}
                                         initial={{ opacity: 0, x: 20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 0.1 + i * 0.05 }}
@@ -156,7 +140,7 @@ const MobileNavigation = ({
                                             onClick={() => setIsOpen(false)}
                                             className="block text-2xl font-bold py-4 text-white hover:text-primary transition-colors border-b border-white/5"
                                         >
-                                            {link.name}
+                                            {t(link.key as any)}
                                         </TransitionLink>
                                     </motion.div>
                                 );
@@ -194,6 +178,7 @@ const MobileNavigation = ({
 const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
     const { scrollY } = useScroll();
     const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const t = useTranslations('Navbar');
 
     const color = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgba(255, 255, 255, 0)", "rgba(255, 255, 255, 1)"])
     const textColor = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgba(255, 255, 255, 1)", "rgba(0, 0, 0, 1)"])
@@ -203,7 +188,7 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
     const arrowColor = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["rgb(26, 40, 69)", "rgba(255, 255, 255, 1)"])
     const boxShadow = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["", "0 4px 6px -1px rgba(26, 40, 69, 0.3)"])
     // Each value is mapped directly from scroll position — no boolean, no state
-    const y = useTransform(scrollY, [SCROLL_START, SCROLL_END], [40, 18]);
+    const y = useTransform(scrollY, [SCROLL_START, SCROLL_END], [0, 18]);
     const width = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["100%", "90%"]);
     const innerContainerWidth = useTransform(scrollY, [SCROLL_START, SCROLL_END], ["90%", "99%"]);
     const borderRadius = useTransform(scrollY, [SCROLL_START, SCROLL_END], [0, 12])
@@ -213,11 +198,8 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
         <>
             {/* <MobileNavigation isOpen={isMobileOpen} setIsOpen={setIsMobileOpen} facilityCategories={facilityCategories} /> */}
             <motion.nav
-                style={{
-                    y,
-
-                }}
-                className="flex fixed left-0 right-0 z-50 w-full  pointer-events-auto"
+                style={{ y }}
+                className="flex fixed left-0 right-0 z-50 w-full pointer-events-auto"
             >
                 <motion.div
                     style={{
@@ -225,7 +207,6 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
                         borderRadius,
                         backgroundColor: color,
                         boxShadow
-
                     }}
                     className={cn("mx-auto",)}
                 >
@@ -235,29 +216,28 @@ const Navbar = ({ facilityCategories = [] }: NavbarProps) => {
                             width: innerContainerWidth,
                             paddingLeft: innerContainerPaddingLeft
                         }}
-                        className=" mx-auto flex items-center h-16 gap-12">
+                        className="mx-auto flex items-center h-16 gap-12">
                         <div className="h-16 py-4 relative">
                             <CustomLink variant="custom" href="/" isNormal>
-
                                 <Logo className="h-full w-max" style={{ fill: logoColor }} />
                             </CustomLink>
                         </div>
                         <div className="flex gap-6">
-                            {NAV_LINKS.map((link, i) => (
+                            {NAV_LINK_DEFS.map((link) => (
                                 <CustomLink
-                                    key={i}
+                                    key={link.key}
                                     href={link.href}
-                                    className=" transition-colors"
+                                    className="transition-colors"
                                     style={{ color: textColor }}
                                 >
-                                    {link.name}
+                                    {t(link.key as any)}
                                 </CustomLink>
                             ))}
                         </div>
-                        <div className="flex ml-auto gap-6">
-
+                        <div className="flex ml-auto gap-3 items-center">
+                            <LanguageSwitcher languages={LANGUAGES} />
                             <CustomLink href="/quote" variant="custom" className={cn(buttonBaseClasses, "pr-2")} style={{ backgroundColor: linkColor, color: linkTextColor }}>
-                                Request a Quote
+                                {t('requestQuote')}
                                 <Arrow variant="primary" style={{ backgroundColor: arrowColor, color: linkColor }} />
                             </CustomLink>
                         </div>

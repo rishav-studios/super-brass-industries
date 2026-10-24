@@ -5,6 +5,7 @@ import Section from '@/components/layout/Section'
 import { EyeBrowSimple } from '@/components/shared/SectionHeader'
 import { exportCountries, type ExportCountry } from '@/constants/export_countries'
 import { useGlobe } from '@/contexts/GlobeContext'
+import { useTranslations } from 'next-intl'
 import Globe from './Globe'
 
 const highlightedCountries = exportCountries.map((country: ExportCountry) => country.name)
@@ -38,6 +39,7 @@ const CountryCard = ({ country, onMouseEnter, onMouseLeave }: CountryCardProps) 
 }
 
 const Exports = () => {
+    const t = useTranslations('Exports');
     const { selectedCountry, setSelectedCountry } = useGlobe()
     return (
         <Section className='bg-white'>
@@ -51,9 +53,9 @@ const Exports = () => {
             <Container className='relative z-2'>
                 <div className="w-max mx-auto space-y-2">
 
-                    <EyeBrowSimple>Exports</EyeBrowSimple>
+                    <EyeBrowSimple>{t('eyebrow')}</EyeBrowSimple>
                     <h2 className="font-heading text-3xl lg:text-4xl font-bold tracking-tight text-[#1a2845] max-w-xl leading-[1.12]">
-                        We are worldwide.
+                        {t('heading')}
                     </h2>
 
                 </div>
@@ -61,7 +63,7 @@ const Exports = () => {
             </Container>
             {/* countries grid */}
             <Container className="p-8 rounded-md mt-[76dvh] space-y-8 relative z-10 bg-muted">
-                <h3 className="text-3xl font-semibold">Countries We Export To</h3>
+                <h3 className="text-3xl font-semibold">{t('countriesHeading')}</h3>
                 <div className='grid grid-cols-4 gap-6'>
                     {
                         exportCountries.map((country: ExportCountry) => (

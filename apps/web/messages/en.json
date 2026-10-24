@@ -1,0 +1,377 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "categories": "Categories",
+    "contact": "Contact",
+    "requestQuote": "Request a Quote"
+  },
+  "Footer": {
+    "tagline": "Delivering precision machined components to the world's most demanding industries since 2012. Built on quality, scaled with engineering.",
+    "company": "Company",
+    "categories": "Categories",
+    "contactUs": "Contact Us",
+    "businessHours": "Business Hours",
+    "businessHoursValue": "Saturday–Thursday\n8:00 am to 8:00 pm IST",
+    "viewAllCategories": "View all categories",
+    "globalAvailability": "Global Availability & Office Hours",
+    "indiaTime": "India (IST)",
+    "europeTime": "Europe (EU)",
+    "usaEastTime": "USA East (EST)",
+    "usaWestTime": "USA West (PST)",
+    "copyright": "Super Brass Industries. All rights reserved.",
+    "links": {
+      "about": "About Us",
+      "categories": "Categories",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "quality": "Quality Policy"
+    }
+  },
+  "Hero": {
+    "eyebrow": "ISO 9001:2015 Certified • Jamnagar, India",
+    "titleLine1": "Precision Brass",
+    "titleLine2": "Components,",
+    "titleLine3": "Engineered",
+    "titleLine4": "for Global OEMs",
+    "subtitle": "From auto parts to electrical pins — Super Brass Industries manufactures 10M+ precision brass components a year for manufacturers across 18+ countries. Your drawing, our craftsmanship.",
+    "ctaQuote": "Request a Quote",
+    "ctaExplore": "Explore Categories",
+    "badge1": "24-hr Quote Response",
+    "badge2": "±0.005 mm Tolerance",
+    "badge3": "100% Inspected Batches",
+    "stat1Label": "Components / Year",
+    "stat2Label": "Export Countries",
+    "stat3Label": "mm Tolerance",
+    "stat4Label": "Quote Turnaround"
+  },
+  "HomeAbout": {
+    "eyebrow": "who we are",
+    "heading": "From the brass city of India, to production lines worldwide",
+    "p1": "Super Brass Industries was established in 2012 in Jamnagar — the city that produces over 70% of India's brass components. In just over a decade we have grown into a trusted OEM partner for automotive, electrical and gas industry manufacturers across 18+ countries.",
+    "p2": "With in-house CNC turning, traub machining, threading, plating coordination and a fully equipped inspection lab, we control every stage of production — so you receive components that fit right, first time, every time.",
+    "cta": "Learn more about us",
+    "credentials": {
+      "iso": "ISO 9001:2015 Certified QMS",
+      "exports": "Exports to 18+ Countries",
+      "cnc": "In-house CNC & Traub Setup",
+      "inspection": "100% Batch Inspection"
+    },
+    "badge": {
+      "year": "Est. 2012",
+      "location": "Jamnagar, Gujarat"
+    }
+  },
+  "HomeOEM": {
+    "eyebrow": "Direct From The Source",
+    "titleLine1": "We are",
+    "titleLine2": "OEM Manufacturers.",
+    "subtitle": "When you work with Super Brass Industries, you work directly with the factory floor. No middlemen, no markups — just precision engineering, complete transparency, and total confidentiality for your proprietary parts.",
+    "features": {
+      "drawingTitle": "Drawing-to-Delivery",
+      "drawingDesc": "Send a 2D drawing, 3D model or sample — we handle tooling, production, finishing and export packing.",
+      "inhouseTitle": "In-house Everything",
+      "inhouseDesc": "CNC turning, traub machining, threading, knurling and inspection under one roof.",
+      "ndaTitle": "NDA-Protected Development",
+      "ndaDesc": "Your designs stay confidential. We routinely work under NDAs with global OEMs."
+    },
+    "stats": {
+      "tolerance": "MM Tolerance Capability",
+      "quotation": "Quotation Turnaround"
+    },
+    "cta": "Get a Free Quote"
+  },
+  "HomeCategories": {
+    "eyebrow": "Our Product Range",
+    "heading": "Many categories. One quality standard.",
+    "viewDetails": "View Details"
+  },
+  "HomeIndustries": {
+    "eyebrow": "Industries",
+    "heading": "Industries we serve",
+    "industries": {
+      "automotive": {
+        "name": "Automotive",
+        "desc": "Fuel systems, braking, sensors and engine components for OEMs and Tier-1s."
+      },
+      "electrical": {
+        "name": "Electrical & Electronics",
+        "desc": "Pins, terminals, contacts and connectors for switchgear and appliances."
+      },
+      "gas": {
+        "name": "Gas & Energy",
+        "desc": "Safety-critical valves, nozzles and regulator parts for LPG and CNG."
+      },
+      "plumbing": {
+        "name": "Plumbing & Sanitary",
+        "desc": "Leak-proof fittings, inserts and valve components for water systems."
+      },
+      "marine": {
+        "name": "Marine",
+        "desc": "Precision connector bodies and RF hardware components."
+      },
+      "construction": {
+        "name": "Construction",
+        "desc": "Architectural hardware, anchors and fastening solutions."
+      },
+      "agriculture": {
+        "name": "Agriculture",
+        "desc": "Sprayer nozzles, irrigation fittings and pump components."
+      },
+      "railways": {
+        "name": "Railways",
+        "desc": "High-reliability components manufactured to strict specifications."
+      },
+      "defence": {
+        "name": "Defence",
+        "desc": "High-reliability components manufactured to strict specifications."
+      },
+      "aerospace": {
+        "name": "Aerospace",
+        "desc": "High-reliability components manufactured to strict specifications."
+      }
+    }
+  },
+  "HomeStatistics": {
+    "eyebrow": "Our Story In Numbers",
+    "headingStart": "Four numbers. One",
+    "headingItalic": "story",
+    "headingEnd": "of precision.",
+    "subtitle": "From a single machine in Jamnagar to shipments across four continents — here is how Super Brass Industries grew, told the only way engineers trust.",
+    "chapterLabel": "Chapter",
+    "stats": {
+      "years": "Years of Excellence",
+      "clients": "Global Clients",
+      "components": "Components / Year",
+      "countries": "Countries Served"
+    },
+    "story": {
+      "ch1Title": "It started on the shop floor",
+      "ch1Desc": "Since 2012, a single CNC line in Jamnagar has grown into a full precision-machining unit — every year adding tighter tolerances and tougher parts.",
+      "ch2Title": "Then the world started calling",
+      "ch2Desc": "Manufacturers and importers who arrived with one drawing stayed for their entire component range. Most of our work today comes from repeat orders.",
+      "ch3Title": "Volume met precision",
+      "ch3Desc": "Millions of parts a year, each one held to ±0.005 mm and inspected batch by batch — because at this scale, consistency is the product.",
+      "ch4Title": "And the map kept growing",
+      "ch4Desc": "Our components now leave Jamnagar in export-grade packaging bound for North America, Europe, the Middle East and Oceania."
+    },
+    "ctaLabel": "The next chapter is usually written with a drawing and a deadline.",
+    "cta": "Start yours with a quote"
+  },
+  "Exports": {
+    "eyebrow": "Exports",
+    "heading": "We are worldwide.",
+    "countriesHeading": "Countries We Export To"
+  },
+  "HomeWhyUs": {
+    "eyebrow": "why choose us",
+    "heading": "The Super Brass Advantage",
+    "subtitle": "Delivering precision at scale with zero compromises. Here is why industry leaders trust us with their most critical components.",
+    "reasons": {
+      "oemTitle": "OEM Factory-Direct",
+      "oemDesc": "No traders, no middlemen. Prices, answers and accountability come straight from the production floor in Jamnagar.",
+      "precisionTitle": "Precision You Can Measure",
+      "precisionDesc": "CNC and traub machining held to ±0.005 mm, verified with calibrated instruments and documented inspection reports.",
+      "quotationTitle": "24-Hour Quotations",
+      "quotationDesc": "Engineering-reviewed quotes with pricing, lead time and material options delivered within one business day.",
+      "isoTitle": "ISO 9001:2015 Systems",
+      "isoDesc": "A certified QMS with full material traceability, PPAP documentation and batch-wise test certificates on demand.",
+      "logisticsTitle": "Export-Ready Logistics",
+      "logisticsDesc": "VCI-protected packaging, third-party inspection and FOB / CIF / DDP shipping to 18+ countries.",
+      "ndaTitle": "Total Confidentiality",
+      "ndaDesc": "NDA-protected handling of your proprietary drawings, samples and custom-developed components."
+    }
+  },
+  "HomeFAQ": {
+    "eyebrow": "FAQs",
+    "heading": "Answers before you ask",
+    "subtitle": "Everything purchase teams usually want to know. Still have questions? Our team responds within one business day.",
+    "cta": "Ask a Question",
+    "faqs": {
+      "q1": "What is your minimum order quantity (MOQ)?",
+      "a1": "Our MOQ is flexible and depends on the component complexity and size. For standard components we typically start from 1,000 pieces, while for custom-developed parts we can support prototype and pilot quantities before scaling to full production.",
+      "q2": "Can you manufacture parts from our drawings or samples?",
+      "a2": "Yes — that is our core strength as OEM manufacturers. Share your 2D drawings, 3D models (STEP/IGES) or a physical sample, and our engineering team will review it, suggest optimisations if needed, and deliver a detailed quotation within 24–48 hours. All development is protected under NDA.",
+      "q3": "Which quality certifications do you hold?",
+      "a3": "Super Brass Industries operates an ISO 9001:2015 certified quality management system. Our components are RoHS compliant, and we provide material test certificates, dimensional inspection reports and PPAP documentation on request.",
+      "q4": "What are your typical lead times?",
+      "a4": "Standard components ship in 2–3 weeks from order confirmation. Custom parts require 3–5 weeks including tooling and sample approval. For repeat orders we maintain safety stock programs that can reduce lead times to under a week.",
+      "q5": "Which brass grades and finishes do you work with?",
+      "a5": "We machine CW614N, CW617N, C36000, C38500, DZR and lead-free brass grades. Surface finishes include natural, nickel, tin, zinc, chrome and silver plating — all with verified plating thickness reports.",
+      "q6": "Do you export? How are shipments packed?",
+      "a6": "Yes, we currently export to 18+ countries across North America, Europe, the Middle East and Oceania. Components are packed in VCI-lined export-grade packaging with full traceability labelling, shipped via sea or air per your Incoterms (FOB, CIF, DDP)."
+    }
+  },
+  "HomeCTA": {
+    "eyebrow": "Start Your Project",
+    "headingStart": "Have a drawing? Get a detailed quote within",
+    "headingHighlight": "24 hours.",
+    "subtitle": "Send us your specifications and our engineering team will respond with pricing, lead time and material recommendations — no obligation, fully confidential.",
+    "ctaQuote": "Request a Quote",
+    "ctaTalk": "Talk to Our Team"
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "About Super Brass Industries",
+      "titleStart": "Built in Jamnagar. Trusted by manufacturers ",
+      "titleHighlight": "worldwide.",
+      "subtitle": "Since 2021, we have manufactured precision brass components for companies that cannot afford a single defective part. This is our story."
+    },
+    "intro": {
+      "eyebrow": "Our Foundation",
+      "heading": "A young company with an old-school obsession: getting it right",
+      "p1": "Super Brass Industries was founded in 2021 in Jamnagar, Gujarat — the undisputed brass capital of India. Our founders grew up around lathes and turning centres, and started the company with a simple conviction: global buyers deserve a supplier who treats their drawing like a contract.",
+      "p2": "Today we operate a modern facility with CNC turning centres, high-speed traub machines, thread rolling, knurling and a dedicated quality lab. As OEM manufacturers, we serve automotive, electrical, gas and plumbing industry customers directly — with no trading layer in between.",
+      "stats": {
+        "established": "Established",
+        "team": "Team Members",
+        "categories": "Product Categories"
+      }
+    },
+    "journey": {
+      "eyebrow": "Company Journey",
+      "heading": "From a workshop to a global facility",
+      "2012": {
+        "title": "The Beginning",
+        "desc": "Super Brass Industries is founded in Jamnagar — the brass capital of India — with a small workshop and a commitment to precision engineering."
+      },
+      "2015": {
+        "title": "Building the Foundation",
+        "desc": "Expanded the facility and added CNC turning centres, establishing the core machining capabilities that define the company today."
+      },
+      "2017": {
+        "title": "Scaling Production",
+        "desc": "Installed high-speed traub machines and grew monthly output to serve automotive and electrical industry clients across India."
+      },
+      "2019": {
+        "title": "Quality Systems",
+        "desc": "Implemented formal quality management processes, in-house inspection lab, and material traceability systems across all production lines."
+      },
+      "2021": {
+        "title": "Going Global",
+        "desc": "Shipped the first international consignments to the UAE and Germany, entering global OEM supply chains for the first time."
+      },
+      "2024": {
+        "title": "ISO 9001:2015 Certified",
+        "desc": "Achieved ISO certification, crossed 120 active clients including automotive OEM suppliers and electrical majors across 18+ countries."
+      },
+      "2026": {
+        "title": "The Road Ahead",
+        "desc": "Commissioning a new automated facility with robotic loading, inline vision inspection, and doubled export capacity."
+      }
+    },
+    "vision": {
+      "title": "Our Vision",
+      "desc": "To make \"Made in Jamnagar\" the first choice of every global manufacturer sourcing brass components — by proving that Indian precision engineering can outperform any alternative on quality, reliability and value."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "desc": "To deliver zero-defect brass components on time, every time — through continuous investment in machinery and metrology, rigorous process control, honest partnerships with our customers, and the relentless development of our people."
+    },
+    "values": {
+      "quality": {
+        "title": "Uncompromising Quality",
+        "desc": "Every batch passes dimensional, thread and finish inspection before it leaves our facility."
+      },
+      "partnership": {
+        "title": "Partnership Mindset",
+        "desc": "We act as an extension of your supply chain — transparent pricing, honest lead times, proactive communication."
+      },
+      "investment": {
+        "title": "Continuous Investment",
+        "desc": "Profits go back into machines, metrology and people, so our capability grows with your requirements."
+      }
+    },
+    "certificates": {
+      "eyebrow": "Certifications & Compliance",
+      "heading": "Quality you can audit, not just trust",
+      "cta": "Read Our Quality Policy",
+      "iso": "Certified Quality Management System covering design, manufacture and supply of brass components.",
+      "rohs": "All components conform to the Restriction of Hazardous Substances directive for global markets.",
+      "ce": "Applicable product ranges meet European health, safety and environmental protection standards.",
+      "msme": "Government of India registered manufacturing enterprise, Jamnagar, Gujarat.",
+      "docLabel": "Documentation on demand:",
+      "docDesc": "material test certificates, dimensional inspection reports, plating thickness reports and PPAP documentation are available with every shipment on request."
+    }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact Super Brass Industries | Jamnagar, India",
+      "description": "Get in touch with Super Brass Industries for custom brass components, precision CNC turning, technical drawings, and 24-hour RFQ responses."
+    },
+    "hero": {
+      "eyebrow": "Direct Manufacturing & RFQ Inquiries",
+      "titleStart": "Precision Machining Solutions, ",
+      "titleHighlight": "Engineered for You",
+      "subtitle": "Submit your custom component drawings, technical specifications, or volume requirements. Our engineering team guarantees a detailed quotation and DFM review within 24 hours.",
+      "badges": {
+        "turnaround": "24h Quote Response",
+        "nda": "NDA & Drawing Security",
+        "tolerance": "±0.005 mm Tolerance",
+        "exports": "18+ Export Destinations"
+      }
+    },
+    "form": {
+      "title": "Send an Inquiry / Request for Quotation",
+      "subtitle": "Fill out the technical form below. All proprietary drawings and specifications are treated with strict confidentiality.",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "e.g. John Doe",
+      "emailLabel": "Work / Business Email",
+      "emailPlaceholder": "name@company.com",
+      "contactLabel": "Contact / WhatsApp Number",
+      "contactPlaceholder": "+1 555 123 4567 or +91 98765 43210",
+      "companyLabel": "Company / Organization Name",
+      "companyPlaceholder": "e.g. Acme Machining Corp.",
+      "optionalBadge": "Optional",
+      "subjectLabel": "Inquiry Subject / Area",
+      "subjectPlaceholder": "e.g. Custom CNC Turning RFQ - Part #SB-402",
+      "quickSubjectsLabel": "Quick Select Topic:",
+      "messageLabel": "Project Specifications & Requirements",
+      "messagePlaceholder": "Please include material grade (e.g. CW614N, IS 319, CuZn39Pb3), expected annual quantity, batch sizes, surface finish, tolerance requirements, or application details...",
+      "attachmentLabel": "Technical Drawings & Specifications",
+      "attachmentHint": "PDF, CAD files (DWG, DXF, STEP, IGES), images (PNG, JPG), or ZIP archive (Max 15MB)",
+      "dropzonePrompt": "Drag & drop your CAD drawings or documents here, or",
+      "dropzoneBrowse": "Browse from computer",
+      "removeFile": "Remove file",
+      "submitButton": "Submit Inquiry & RFQ",
+      "submittingButton": "Sending Inquiry...",
+      "successTitle": "Inquiry Received Successfully!",
+      "successDesc": "Thank you for contacting Super Brass Industries. Your reference ID is",
+      "successFollowup": "Our engineering and estimation department is reviewing your specifications and will respond within 24 hours.",
+      "sendAnother": "Send Another Inquiry"
+    },
+    "info": {
+      "title": "Direct Contact & Factory Details",
+      "subtitle": "Connect directly with our manufacturing unit in Jamnagar or contact our dedicated sales representatives.",
+      "factory": {
+        "title": "Manufacturing Unit & HQ",
+        "address": "Plot No. 34-36, GIDC Phase II, Dared, Jamnagar - 361004, Gujarat, India",
+        "note": "Factory visits and customer audits welcome by prior appointment."
+      },
+      "directHotlines": {
+        "title": "Direct Lines & Support",
+        "rfqEmail": "info@superbrassindustries.com",
+        "salesPhone": "+91 8320776463",
+        "salesPhoneLabel": "Sales & RFQ Desk (WhatsApp Available)",
+        "adminPhone": "+91 8141100249",
+        "adminPhoneLabel": "Plant Operations & Admin"
+      },
+      "hours": {
+        "title": "Plant Operating Hours",
+        "schedule": "Monday – Saturday: 8:00 AM – 8:00 PM IST (Closed Sundays)"
+      },
+      "checklist": {
+        "title": "For Fast 24-Hour Quotations",
+        "item1": "Attach 2D PDF drawing with dimensional tolerances and thread callouts",
+        "item2": "Provide 3D CAD files (STEP / IGES) for complex turned components",
+        "item3": "Specify brass alloy (CuZn39Pb3, IS 319 Gr. I, CW614N, Eco Brass)",
+        "item4": "State trial sample batch and annual production batch quantities",
+        "item5": "Mention special surface finishes (Nickel, Chrome, Tin, Natural)"
+      }
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Language"
+  }
+}

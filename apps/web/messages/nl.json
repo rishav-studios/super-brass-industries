@@ -1,0 +1,338 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "Over ons",
+    "categories": "Categorieën",
+    "contact": "Contact",
+    "requestQuote": "Offerte aanvragen"
+  },
+  "Footer": {
+    "tagline": "Levering van precisiemachinecomponenten aan 's werelds meest veeleisende industrieën sinds 2012. Gebouwd op kwaliteit, geschaald met techniek.",
+    "company": "Bedrijf",
+    "categories": "Categorieën",
+    "contactUs": "Neem contact op",
+    "businessHours": "Openingstijden",
+    "businessHoursValue": "Zaterdag–Donderdag\n8:00 tot 20:00 IST",
+    "viewAllCategories": "Alle categorieën bekijken",
+    "globalAvailability": "Mondiale beschikbaarheid en kantooruren",
+    "indiaTime": "India (IST)",
+    "europeTime": "Europa (EU)",
+    "usaEastTime": "VS Oost (EST)",
+    "usaWestTime": "VS West (PST)",
+    "copyright": "Super Brass Industries. Alle rechten voorbehouden.",
+    "links": {
+      "about": "Over ons",
+      "categories": "Categorieën",
+      "contact": "Contact",
+      "privacy": "Privacybeleid",
+      "terms": "Servicevoorwaarden",
+      "quality": "Kwaliteitsbeleid"
+    }
+  },
+  "Hero": {
+    "eyebrow": "ISO 9001:2015 Gecertificeerd • Jamnagar, India",
+    "titleLine1": "Precisie",
+    "titleLine2": "Messingcomponenten,",
+    "titleLine3": "Ontworpen",
+    "titleLine4": "voor wereldwijde OEM's",
+    "subtitle": "Van auto-onderdelen tot elektrische pinnen — Super Brass Industries produceert jaarlijks meer dan 10 miljoen precisiecomponenten van messing voor fabrikanten in 18+ landen. Uw tekening, ons vakmanschap.",
+    "ctaQuote": "Offerte aanvragen",
+    "ctaExplore": "Categorieën verkennen",
+    "badge1": "Offerterespons binnen 24u",
+    "badge2": "±0,005 mm tolerantie",
+    "badge3": "100% geïnspecteerde batches",
+    "stat1Label": "Componenten / Jaar",
+    "stat2Label": "Exportlanden",
+    "stat3Label": "mm tolerantie",
+    "stat4Label": "Offertedoorlooptijd"
+  },
+  "HomeAbout": {
+    "eyebrow": "wie wij zijn",
+    "heading": "Vanuit de messingstad van India naar productielijnen wereldwijd",
+    "p1": "Super Brass Industries werd opgericht in 2012 in Jamnagar — de stad die meer dan 70% van India's messingcomponenten produceert. In iets meer dan een decennium zijn we uitgegroeid tot een vertrouwde OEM-partner voor fabrikanten in de automotive-, elektro- en gasindustrie in 18+ landen.",
+    "p2": "Met intern CNC-draaien, traub-bewerking, schroefdraadsnijden, galvanisatiecoördinatie en een volledig uitgerust inspectiemechanisme beheersen we elke productiefase — zodat u componenten ontvangt die de eerste keer perfect passen.",
+    "cta": "Meer over ons",
+    "credentials": {
+      "iso": "ISO 9001:2015 gecertificeerd QMS",
+      "exports": "Export naar 18+ landen",
+      "cnc": "Intern CNC- en Traub-installatie",
+      "inspection": "100% batchinspectie"
+    },
+    "badge": {
+      "year": "Opger. 2012",
+      "location": "Jamnagar, Gujarat"
+    }
+  },
+  "HomeOEM": {
+    "eyebrow": "Direct van de bron",
+    "titleLine1": "Wij zijn",
+    "titleLine2": "OEM-fabrikanten.",
+    "subtitle": "Wanneer u met Super Brass Industries werkt, werkt u rechtstreeks met de fabrieksvloer. Geen tussenpersonen, geen opslag — alleen precisietechniek, volledige transparantie en totale vertrouwelijkheid voor uw gepatenteerde onderdelen.",
+    "features": {
+      "drawingTitle": "Van tekening tot levering",
+      "drawingDesc": "Stuur een 2D-tekening, 3D-model of monster — wij regelen tooling, productie, afwerking en exportverpakking.",
+      "inhouseTitle": "Alles in huis",
+      "inhouseDesc": "CNC-draaien, traub-bewerking, schroefdraadsnijden, knurlen en inspectie onder één dak.",
+      "ndaTitle": "NDA-beschermde ontwikkeling",
+      "ndaDesc": "Uw ontwerpen blijven vertrouwelijk. Wij werken regelmatig onder NDA's met mondiale OEM's."
+    },
+    "stats": {
+      "tolerance": "MM tolerantiemogelijkheid",
+      "quotation": "Offertedoorlooptijd"
+    },
+    "cta": "Gratis offerte aanvragen"
+  },
+  "HomeCategories": {
+    "eyebrow": "Ons productassortiment",
+    "heading": "Veel categorieën. Één kwaliteitsstandaard.",
+    "viewDetails": "Details bekijken"
+  },
+  "HomeIndustries": {
+    "eyebrow": "Sectoren",
+    "heading": "Sectoren die wij bedienen",
+    "industries": {
+      "automotive": { "name": "Automotive", "desc": "Brandstof systemen, remmen, sensoren en motorcomponenten voor OEM's en Tier-1's." },
+      "electrical": { "name": "Elektro en Elektronica", "desc": "Pinnen, klemmen, contacten en connectoren voor schakelkasten en apparaten." },
+      "gas": { "name": "Gas en Energie", "desc": "Veiligheidskritische kleppen, sproeiers en regelaaronderdelen voor LPG en CNG." },
+      "plumbing": { "name": "Sanitair en Installatie", "desc": "Lekvrije fittingen, inserts en kleponderdelen voor watersystemen." },
+      "marine": { "name": "Marine", "desc": "Precisie connectorkassen en RF hardwarecomponenten." },
+      "construction": { "name": "Bouw", "desc": "Architectonisch beslag, ankers en bevestigingsoplossingen." },
+      "agriculture": { "name": "Landbouw", "desc": "Sproeiersproeiers, irrigatiefittingen en pompcomponenten." },
+      "railways": { "name": "Spoorwegen", "desc": "Hoogbetrouwbare componenten gefabriceerd op basis van strikte specificaties." },
+      "defence": { "name": "Defensie", "desc": "Hoogbetrouwbare componenten gefabriceerd op basis van strikte specificaties." },
+      "aerospace": { "name": "Lucht- en Ruimtevaart", "desc": "Hoogbetrouwbare componenten gefabriceerd op basis van strikte specificaties." }
+    }
+  },
+  "HomeStatistics": {
+    "eyebrow": "Ons verhaal in cijfers",
+    "headingStart": "Vier getallen. Één",
+    "headingItalic": "verhaal",
+    "headingEnd": "van precisie.",
+    "subtitle": "Van een enkele machine in Jamnagar tot verzendingen op vier continenten — zo groeide Super Brass Industries, verteld op de enige manier die ingenieurs vertrouwen.",
+    "chapterLabel": "Hoofdstuk",
+    "stats": {
+      "years": "Jaar van excellentie",
+      "clients": "Mondiale klanten",
+      "components": "Componenten / Jaar",
+      "countries": "Bediende landen"
+    },
+    "story": {
+      "ch1Title": "Het begon op de werkvloer",
+      "ch1Desc": "Sinds 2012 is een enkele CNC-lijn in Jamnagar uitgegroeid tot een volledige precisieverwerkingseenheid — elk jaar met nauwere toleranties en moeilijkere onderdelen.",
+      "ch2Title": "Toen begon de wereld te bellen",
+      "ch2Desc": "Fabrikanten en importeurs die kwamen met één tekening, bleven voor hun volledige componentenassortiment. Het grootste deel van ons werk komt tegenwoordig uit herhalingsorders.",
+      "ch3Title": "Volume ontmoette precisie",
+      "ch3Desc": "Miljoenen onderdelen per jaar, elk gehouden op ±0,005 mm en batch voor batch geïnspecteerd — want op deze schaal is consistentie het product.",
+      "ch4Title": "En de kaart bleef groeien",
+      "ch4Desc": "Onze componenten verlaten Jamnagar nu in exportverpakkingen bestemd voor Noord-Amerika, Europa, het Midden-Oosten en Oceanië."
+    },
+    "ctaLabel": "Het volgende hoofdstuk wordt gewoonlijk geschreven met een tekening en een deadline.",
+    "cta": "Begin met een offerte"
+  },
+  "Exports": {
+    "eyebrow": "Export",
+    "heading": "Wij zijn wereldwijd actief.",
+    "countriesHeading": "Landen waarnaar wij exporteren"
+  },
+  "HomeWhyUs": {
+    "eyebrow": "waarom ons kiezen",
+    "heading": "Het Super Brass Voordeel",
+    "subtitle": "Precisie op schaal leveren zonder compromissen. Hierom vertrouwen marktleiders ons hun meest kritische componenten toe.",
+    "reasons": {
+      "oemTitle": "OEM Fabrikant Direct",
+      "oemDesc": "Geen handelaars, geen tussenpersonen. Prijzen, antwoorden en verantwoording komen rechtstreeks van de productievloer in Jamnagar.",
+      "precisionTitle": "Meetbare precisie",
+      "precisionDesc": "CNC- en traub-bewerking gehouden op ±0,005 mm, geverifieerd met gekalibreerde instrumenten en gedocumenteerde inspectierapporten.",
+      "quotationTitle": "24-uursofferten",
+      "quotationDesc": "Door engineers beoordeelde offertes met prijzen, doorlooptijden en materiaalopties geleverd binnen één werkdag.",
+      "isoTitle": "ISO 9001:2015 Systemen",
+      "isoDesc": "Een gecertificeerd QMS met volledige materiaaltraceerbaarheid, PPAP-documentatie en batchgewijze testcertificaten op aanvraag.",
+      "logisticsTitle": "Exportklare logistiek",
+      "logisticsDesc": "VCI-beschermde verpakking, inspectie door derden en FOB/CIF/DDP-verzending naar 18+ landen.",
+      "ndaTitle": "Totale vertrouwelijkheid",
+      "ndaDesc": "NDA-beschermde behandeling van uw gepatenteerde tekeningen, monsters en op maat ontwikkelde componenten."
+    }
+  },
+  "HomeFAQ": {
+    "eyebrow": "Veelgestelde vragen",
+    "heading": "Antwoorden voordat u vraagt",
+    "subtitle": "Alles wat inkoopteams gewoonlijk willen weten. Heeft u nog vragen? Ons team reageert binnen één werkdag.",
+    "cta": "Stel een vraag",
+    "faqs": {
+      "q1": "Wat is uw minimale bestelhoeveelheid (MOQ)?",
+      "a1": "Onze MOQ is flexibel en hangt af van de complexiteit en grootte van het component. Voor standaardcomponenten beginnen we doorgaans vanaf 1.000 stuks, terwijl we voor op maat ontwikkelde onderdelen prototype- en pilothoeveelheden kunnen ondersteunen voordat we opschalen naar volledige productie.",
+      "q2": "Kunt u onderdelen fabriceren op basis van onze tekeningen of monsters?",
+      "a2": "Ja — dat is onze kernkracht als OEM-fabrikanten. Deel uw 2D-tekeningen, 3D-modellen (STEP/IGES) of een fysiek monster, en ons engineeringteam zal het beoordelen, optimaliseringsvoorstellen doen indien nodig, en een gedetailleerde offerte leveren binnen 24–48 uur. Alle ontwikkeling is beschermd door NDA.",
+      "q3": "Welke kwaliteitscertificeringen heeft u?",
+      "a3": "Super Brass Industries exploiteert een ISO 9001:2015 gecertificeerd kwaliteitsmanagementsysteem. Onze componenten voldoen aan RoHS, en we verstrekken op aanvraag materiaaltestrapporten, dimensionale inspectierapporten en PPAP-documentatie.",
+      "q4": "Wat zijn uw typische levertijden?",
+      "a4": "Standaardcomponenten worden 2–3 weken na orderbevestiging verzonden. Aangepaste onderdelen vereisen 3–5 weken inclusief tooling en monstergoedkeuring. Voor herhalingsorders handhaven wij veiligheidsvoorraadrapporten die levertijden kunnen verminderen tot minder dan een week.",
+      "q5": "Met welke messing kwaliteiten en afwerkingen werkt u?",
+      "a5": "Wij bewerken CW614N, CW617N, C36000, C38500, DZR en loodvrije messing kwaliteiten. Oppervlakteafwerkingen omvatten natuur, nikkel, tin, zink, chroom en zilver plateren — allemaal met geverifieerde plaatrapporten.",
+      "q6": "Exporteert u? Hoe worden verzendingen verpakt?",
+      "a6": "Ja, we exporteren momenteel naar 18+ landen in Noord-Amerika, Europa, het Midden-Oosten en Oceanië. Componenten worden verpakt in VCI-gevoerde exportverpakking met volledige traceerbaarheidslabeling, verzonden via zee of lucht op basis van uw Incoterms (FOB, CIF, DDP)."
+    }
+  },
+  "HomeCTA": {
+    "eyebrow": "Start uw project",
+    "headingStart": "Heeft u een tekening? Ontvang een gedetailleerde offerte binnen",
+    "headingHighlight": "24 uur.",
+    "subtitle": "Stuur ons uw specificaties en ons engineeringteam reageert met prijzen, levertijden en materiaaladviezen — vrijblijvend, volledig vertrouwelijk.",
+    "ctaQuote": "Offerte aanvragen",
+    "ctaTalk": "Spreek met ons team"
+  },
+  "About": {
+    "hero": {
+      "eyebrow": "Over Super Brass Industries",
+      "titleStart": "Gemaakt in Jamnagar. Vertrouwd door fabrikanten ",
+      "titleHighlight": "wereldwijd.",
+      "subtitle": "Sinds 2021 produceren we precisie messingcomponenten voor bedrijven die zich geen enkel defect onderdeel kunnen veroorloven. Dit is ons verhaal."
+    },
+    "intro": {
+      "eyebrow": "Onze basis",
+      "heading": "Een jong bedrijf met een ouderwetse obsessie: het goed doen",
+      "p1": "Super Brass Industries werd opgericht in 2021 in Jamnagar, Gujarat — de onbetwiste messinghoofdstad van India. Onze oprichters groeiden op rondom draaibanken en draaicentra, en startten het bedrijf met een eenvoudige overtuiging: mondiale kopers verdienen een leverancier die hun tekening behandelt als een contract.",
+      "p2": "Tegenwoordig exploiteren we een moderne faciliteit met CNC-draaicentra, hogesnelheids traub-machines, schroefdraadwalsen, knurlen en een toegewijd kwaliteitslaboratorium. Als OEM-fabrikanten bedienen we directe klanten in de automotive-, elektro-, gas- en sanitairindustrie — zonder handelslaag tussenin.",
+      "stats": {
+        "established": "Opgericht",
+        "team": "Teamleden",
+        "categories": "Productcategorieën"
+      }
+    },
+    "journey": {
+      "eyebrow": "Company Journey",
+      "heading": "2012 → 2026: From a workshop to a global facility",
+      "2012": {
+        "title": "The Beginning",
+        "desc": "Super Brass Industries is founded in Jamnagar — the brass capital of India — with a small workshop and a commitment to precision engineering."
+      },
+      "2015": {
+        "title": "Building the Foundation",
+        "desc": "Expanded the facility and added CNC turning centres, establishing the core machining capabilities that define the company today."
+      },
+      "2017": {
+        "title": "Scaling Production",
+        "desc": "Installed high-speed traub machines and grew monthly output to serve automotive and electrical industry clients across India."
+      },
+      "2019": {
+        "title": "Quality Systems",
+        "desc": "Implemented formal quality management processes, in-house inspection lab, and material traceability systems across all production lines."
+      },
+      "2021": {
+        "title": "Going Global",
+        "desc": "Shipped the first international consignments to the UAE and Germany, entering global OEM supply chains for the first time."
+      },
+      "2024": {
+        "title": "ISO 9001:2015 Certified",
+        "desc": "Achieved ISO certification, crossed 120 active clients including automotive OEM suppliers and electrical majors across 18+ countries."
+      },
+      "2026": {
+        "title": "The Road Ahead",
+        "desc": "Commissioning a new automated facility with robotic loading, inline vision inspection, and doubled export capacity."
+      }
+    },
+    "vision": {
+      "title": "Onze visie",
+      "desc": "Van 'Made in Jamnagar' de eerste keuze maken voor elke mondiale fabrikant die messingcomponenten inkoopt — door te bewijzen dat Indische precisietechniek elke alternatieve in kwaliteit, betrouwbaarheid en waarde kan overtreffen."
+    },
+    "mission": {
+      "title": "Onze missie",
+      "desc": "Foutloze messingcomponenten op tijd leveren, elke keer — door continue investering in machines en metrologie, rigoureuze procescontrole, eerlijke partnerschappen met onze klanten, en de voortdurende ontwikkeling van onze mensen."
+    },
+    "values": {
+      "quality": { "title": "Compromisloze kwaliteit", "desc": "Elke batch doorloopt dimensionale, schroefdraard- en afwerkinspectie voordat het onze faciliteit verlaat." },
+      "partnership": { "title": "Partnerschapsmentaliteit", "desc": "We fungeren als een verlengstuk van uw toeleveringsketen — transparante prijsstelling, eerlijke levertijden, proactieve communicatie." },
+      "investment": { "title": "Continue investering", "desc": "Winsten gaan terug naar machines, metrologie en mensen, zodat onze capaciteit groeit met uw vereisten." }
+    },
+    "certificates": {
+      "eyebrow": "Certificeringen en naleving",
+      "heading": "Kwaliteit die u kunt controleren, niet alleen vertrouwen",
+      "cta": "Lees ons kwaliteitsbeleid",
+      "iso": "Gecertificeerd kwaliteitsmanagementsysteem dat ontwerp, productie en levering van messingcomponenten omvat.",
+      "rohs": "Alle componenten voldoen aan de richtlijn betreffende beperking van gevaarlijke stoffen voor mondiale markten.",
+      "ce": "Van toepassing zijnde productreeksen voldoen aan Europese gezondheids-, veiligheids- en milieubeschermingsnormen.",
+      "msme": "Bij de Indiase overheid geregistreerde productiebedrijf, Jamnagar, Gujarat.",
+      "docLabel": "Documentatie op aanvraag:",
+      "docDesc": "materiaaltestrapporten, dimensionale inspectierapporten, plaatdikterapporten en PPAP-documentatie zijn bij elke zending beschikbaar op aanvraag."
+    }
+  },
+  "Contact": {
+    "meta": {
+      "title": "Contact Super Brass Industries | Jamnagar, India",
+      "description": "Neem contact op met Super Brass Industries voor op maat gemaakte messing componenten, precisie CNC-draaien en 24-uurs offerte reacties."
+    },
+    "hero": {
+      "eyebrow": "Directe productie & RFQ-vragen",
+      "titleStart": "Precisiebewerking, ",
+      "titleHighlight": "voor u ontworpen",
+      "subtitle": "Dien uw tekeningen en specificaties in. Ons engineeringteam garandeert binnen 24 uur een gedetailleerde offerte en DFM-beoordeling.",
+      "badges": {
+        "turnaround": "24u offerte reactie",
+        "nda": "NDA & tekeningbeveiliging",
+        "tolerance": "±0.005 mm tolerantie",
+        "exports": "18+ exportlanden"
+      }
+    },
+    "form": {
+      "title": "Stuur een aanvraag / Vraag een offerte aan",
+      "subtitle": "Vul onderstaand formulier in. Alle tekeningen en specificaties worden strikt vertrouwelijk behandeld.",
+      "nameLabel": "Volledige naam",
+      "namePlaceholder": "bijv. John Doe",
+      "emailLabel": "Zakelijk e-mailadres",
+      "emailPlaceholder": "naam@bedrijf.nl",
+      "contactLabel": "Telefoon / WhatsApp",
+      "contactPlaceholder": "+31 6 12345678 of +91 98765 43210",
+      "companyLabel": "Bedrijfsnaam",
+      "companyPlaceholder": "bijv. Acme Industrie B.V.",
+      "optionalBadge": "Optioneel",
+      "subjectLabel": "Onderwerp",
+      "subjectPlaceholder": "bijv. CNC Draaien RFQ",
+      "quickSubjectsLabel": "Snel onderwerp kiezen:",
+      "messageLabel": "Projectspecificaties & wensen",
+      "messagePlaceholder": "Vermeld materiaal (bijv. CW614N, IS 319), jaaraantallen, seriegroottes, toleranties of specificaties...",
+      "attachmentLabel": "Technische tekeningen & specificaties",
+      "attachmentHint": "PDF, CAD (DWG, DXF, STEP, IGES), afbeeldingen (PNG, JPG) of ZIP (Max 15MB)",
+      "dropzonePrompt": "Sleep uw bestanden hierheen, of",
+      "dropzoneBrowse": "Blader op computer",
+      "removeFile": "Bestand verwijderen",
+      "submitButton": "Verstuur aanvraag & RFQ",
+      "submittingButton": "Verzenden...",
+      "successTitle": "Aanvraag succesvol ontvangen!",
+      "successDesc": "Bedankt voor uw contact met Super Brass Industries. Uw referentie-ID is",
+      "successFollowup": "Onze engineers beoordelen uw specificaties en nemen binnen 24 uur contact met u op.",
+      "sendAnother": "Nog een aanvraag sturen"
+    },
+    "info": {
+      "title": "Direct contact & fabrieksgegevens",
+      "subtitle": "Neem rechtstreeks contact op met onze fabriek in Jamnagar of onze verkoopafdeling.",
+      "factory": {
+        "title": "Productielocatie & Hoofdkantoor",
+        "address": "Plot No. 34-36, GIDC Phase II, Dared, Jamnagar - 361004, Gujarat, India",
+        "note": "Fabrieksbezoeken en audits welkom op afspraak."
+      },
+      "directHotlines": {
+        "title": "Directe lijnen & ondersteuning",
+        "rfqEmail": "info@superbrassindustries.com",
+        "salesPhone": "+91 8320776463",
+        "salesPhoneLabel": "Verkoop & RFQ (ook WhatsApp)",
+        "adminPhone": "+91 8141100249",
+        "adminPhoneLabel": "Fabrieksadministratie"
+      },
+      "hours": {
+        "title": "Openingstijden fabriek",
+        "schedule": "Maandag – Zaterdag: 8:00 – 20:00 IST (Zondag gesloten)"
+      },
+      "checklist": {
+        "title": "Voor snelle 24-uurs offertes",
+        "item1": "Voeg 2D PDF-tekening toe met toleranties en schroefdraadpecificaties",
+        "item2": "Lever 3D CAD-bestanden (STEP / IGES) voor complexe draaidelen",
+        "item3": "Specificeer de messinglegering (CuZn39Pb3, IS 319, CW614N)",
+        "item4": "Vermeld testmonster- en jaarlijkse productieaantallen",
+        "item5": "Vermeld speciale oppervlaktebehandelingen (nikkel, chroom, tin)"
+      }
+    }
+  },
+  "LanguageSwitcher": {
+    "label": "Taal"
+  }
+}

@@ -54,6 +54,8 @@ export default function ImageReveal({
                         sizes="(max-w-768px) 100vw, 50vw"
                         {...imageProps}
                     />
+
+                    <div className="absolute inset-0 w-full z-10" />
                 </motion.div>
             </motion.div>
         </div>
